@@ -1,0 +1,10 @@
+.center {
+	text-align:center;
+}
+#tablehome{
+	border-width: 1px; 
+	border-style: solid;
+	text-align: center;
+	margin-left: 40%;
+	margin-right: 40%;
+}
