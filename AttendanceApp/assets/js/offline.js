@@ -49,7 +49,7 @@ window.onload = function () {
 
 
 function startUI(){
-	document.body.innerHTML = "<h1 id='heading'> WELCOME </h1>" +
+	document.body.innerHTML = "<h1 class='heading'> WELCOME </h1>" +
 								"<p class='alignCenter' id='info'> <br> Today is: "+ today + "<br>Select Schedule: </p>";
 								
 	//GUIDE MO
@@ -62,7 +62,7 @@ function startUI(){
 
  	var row = document.createElement("tr");
  	var cell = document.createElement("td");
- 	var head = document.createElement("h1");
+ 	var head = document.createElement("h2");
     var cellText = document.createTextNode(firstSched.time);
 
     head.appendChild(cellText);
@@ -75,14 +75,21 @@ function startUI(){
  	// sets the border attribute of tbl to 2 and Id to myTable;
  	tbl.setAttribute("border", "2");
   	tbl.setAttribute("id", "myTable");
-  	head.setAttribute("onclick", "back()");
+  	head.setAttribute("onclick", "seven()");
   	// 830==========================================================
- 	var head1 = document.createElement("h1");
+ 	var head1 = document.createElement("h2");
     var cellText1 = document.createTextNode(secondSched.time);
 
     head1.appendChild(cellText1);
     cell.appendChild(head1);
   	head1.setAttribute("onclick", "back()");
+  	// 930==========================================================
+  	var head2 = document.createElement("h2");
+  	var cellText2 = document.createTextNode(thirdSched.time);
+
+  	head2.appendChild(cellText2);
+    cell.appendChild(head2);
+  	head2.setAttribute("onclick", "back()");
 
 }
 
@@ -90,5 +97,39 @@ function startUI(){
 
 function back(){
 	document.body.innerHTML = "<h1> BGONG UI </h1> <button onclick='startUI()'> CANCEL </button>";
+
+}
+function seven(){
+	console.log('seven');
+	document.body.innerHTML = "<h1> 730 Schedule </h1> <button onclick='startUI()'> CANCEL </button>";
+
+	var body = document.getElementsByTagName("body");
+	var table = document.createElement("table");
+ 	var tblBody = document.createElement("tbody");
+ 	var tr = document.createElement("tr");
+ 	var td = document.createElement("td");
+
+ 	var head = document.createElement("h1");
+ 	var text;
+ 	// head.appendChild(text);
+ 	// td.appendChild(head);
+ 	// tr.appendChild(td);
+ 	// tblBody.appendChild(tr);
+ 	// table.appendChild(tblBody);
+ 	// document.body.appendChild(table);
+ 	// table.setAttribute("border", "1");
+ 	// firstSched.data[i].name
+ 	// firstSched.data[i].room
+ 	
+ 	// ==KULANG PA YUNG data[i].room
+	 for(var i = 0; i < firstSched.data.length; i++){
+	 	text=document.createTextNode(firstSched.data[i].name);
+		head.appendChild(text);
+	 	td.appendChild(head);
+	 	tr.appendChild(td);
+	 	tblBody.appendChild(tr);
+	 	table.appendChild(tblBody);
+	 	document.body.appendChild(table);
+	 }
 
 }

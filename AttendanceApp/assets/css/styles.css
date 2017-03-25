@@ -1,9 +1,12 @@
 body {
 	background-color: floralwhite;
 }
-#heading{
+.heading{
 	font-size: 3em;
 	text-align: center;
+}
+h2{
+	font-size: 2.5em;
 }
 .alignCenter {
 	text-align: center;
