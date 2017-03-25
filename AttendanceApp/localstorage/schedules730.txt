@@ -1,0 +1,25 @@
+{   "name" : "Schedule of Faculties",
+    "term" : "First Semester, AY 2016-2017",
+    "time" : "7:30",
+    "faculty" : [
+        {   "name"     : "Roderick Makil",
+            "room" : "s326"
+        },
+
+        {   "name"     : "Jo Montes",
+            "room" : "s425"
+        },
+
+        {   "name"     : "Maria Concepcion Clemente",
+            "room" : "s426"
+        },
+
+        {   "name"     : "Ali Mangaliag",
+            "room" : "s525"
+        },
+
+        {   "name"     : "Lambert Famorca",
+            "room" : "s424"
+        }
+    ]
+}
