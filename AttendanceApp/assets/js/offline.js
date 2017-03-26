@@ -40,6 +40,86 @@ var info = document.getElementById("info");
 					};
 	localStorage.setItem("930", JSON.stringify(thirdSched));
 	var storedSecondSched = JSON.parse(localStorage.getItem("930"));
+	//1030
+	var fourthSched ={ "time":"10:30-11:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("1030", JSON.stringify(thirdSched));
+	var storedFourthSched = JSON.parse(localStorage.getItem("1030"));
+//1130
+	var fifthSched ={ "time":"11:30-12:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("1130", JSON.stringify(thirdSched));
+	var storedFifthSched = JSON.parse(localStorage.getItem("1130"));
+//1230
+var sixthSched ={ "time":"12:30-1:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("1230", JSON.stringify(thirdSched));
+	var storedSixthSched = JSON.parse(localStorage.getItem("1230"));
+//130
+	var seventhSched ={ "time":"1:30-2:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("130", JSON.stringify(thirdSched));
+	var storedSeventhSched = JSON.parse(localStorage.getItem("130"));
+//230
+var eigthSched ={ "time":"2:30-3:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("230", JSON.stringify(thirdSched));
+	var storedEightSched = JSON.parse(localStorage.getItem("230"));
+//330
+	var ninthSched ={ "time":"3:30-4:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("330", JSON.stringify(thirdSched));
+	var storedSecondSched = JSON.parse(localStorage.getItem("330"));
+//430
+var tenthSched ={ "time":"4:30-5:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("430", JSON.stringify(thirdSched));
+	var storedSecondSched = JSON.parse(localStorage.getItem("430"));
+//530
+var eleventhSched ={ "time":"5:30-6:30",
+						"data":[
+						{"name":"Rhoderic Makil", "room":"s425", "remarks":""},
+						{"name":"Maria Concepcion Clemente", "room":"s326", "remarks":""},
+						{"name":"Jo Montes", "room":"s542", "remarks":""}
+						]
+					};
+	localStorage.setItem("530", JSON.stringify(thirdSched));
+	var storedSecondSched = JSON.parse(localStorage.getItem("530"));
 
 // END LOCAL STORAGE
 
