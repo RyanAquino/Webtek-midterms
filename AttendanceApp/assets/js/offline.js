@@ -43,6 +43,10 @@ var info = document.getElementById("info");
 
 // END LOCAL STORAGE
 
+//Syncing of localstorage
+var firstSchedNew;
+
+
 window.onload = function () {
 	startUI();
 }
@@ -100,17 +104,24 @@ function seven(){
 	var body = document.getElementsByTagName("body");
 	var th1 = document.createElement('th');
 	var th2 = document.createElement('th');
+	var th3 = document.createElement('th');
+	var th4 = document.createElement('th');
 
-
+//table
 	var thtext1 = document.createTextNode("Name");
 	var thtext2 = document.createTextNode("Room");
-
+	var thtext3 = document.createTextNode("Absent");
+	var thtext4 = document.createTextNode("Late");
 
 	th1.appendChild(thtext1);
 	th2.appendChild(thtext2);
+	th3.appendChild(thtext3);
+	th4.appendChild(thtext4);
 
 	table.appendChild(th1);
-	table.appendChild(th2)
+	table.appendChild(th2);
+	table.appendChild(th3);
+	table.appendChild(th4);
 
 
 	table.setAttribute("border", "1");
@@ -122,18 +133,26 @@ function seven(){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
-
+		td3=document.createElement("td");
+		td4=document.createElement("td");
+		button = document.createElement("button");
 		text1 = document.createTextNode(firstSched.data[i].name);
 		text2 = document.createTextNode(firstSched.data[i].room);
-
+		text3 = document.createTextNode("Absent");
+		text4 = document.createTextNode("temp");
 		td1.appendChild(text1);
 		td2.appendChild(text2);
-
+		button.appendChild(text3);
+		td3.appendChild(button);
+		td3.setAttribute("id", firstSched.data[i].absent);
+		td4.appendChild(text4);
 		tr.appendChild(td1);
 		tr.appendChild(td2);
-
+		tr.appendChild(td3);
+		tr.appendChild(td4);	
 		table.appendChild(tr);
 	 }
+
 	document.body.appendChild(table);
 }
 
