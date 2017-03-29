@@ -4,8 +4,6 @@ var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
 today = mm+'/'+dd+'/'+yyyy;
 
-
-
 //LOCAL STORAGE 	
 var info = document.getElementById("info");		
 // 730				
@@ -45,8 +43,8 @@ var info = document.getElementById("info");
 
 // END LOCAL STORAGE
 
-//Syncing of localstorage
-var firstSchedNew;
+
+
 
 
 window.onload = function () {
@@ -55,39 +53,26 @@ window.onload = function () {
 
 
 function startUI(){
-	document.body.innerHTML = "<h1 class='center courier-new'> WELCOME </h1>" +
-								"<p class='center courier-new' id='info'> Today is: "+ today + "<br>Select Schedule: </p>";
+	document.body.innerHTML = "<h1 class='heading'> WELCOME </h1>" +
+								"<p class='alignCenter' id='info'> <br> Today is: "+ today + "<br>Select Schedule: </p>";
 								
 	//GUIDE MO
 	console.log(firstSched.time);
 	console.log(firstSched.data[0].name);	
-
-
-
-	document.backgroundColor ="red";
-	//Div for arranging position
-	var div1 = document.createElement("div");
- 	div1.setAttribute("class", "row")
- 	var div2 = document.createElement("div");
- 	div2.setAttribute("class", "menu col-3 col-m-3");
- 	//UL
- 	var ul = document.createElement("ul");
+	// 730==========================================================
+	var body = document.getElementsByTagName("body");
+	var ul = document.createElement("ul");
 	ul.setAttribute("id", "myTable");
-    
-    div2.appendChild(ul);
-    div1.appendChild(div2);
-  	document.body.appendChild(div1);
-
-  	
-  	// 730==========================================================
-  	var liText = document.createTextNode(firstSched.time);
-
-  	var li = document.createElement("li");
-  	li.appendChild(liText);
-  	ul.appendChild(li);
- 	li.setAttribute("onclick", "seven()");
+ 	var li = document.createElement("li");
+ 	var liText = document.createTextNode(firstSched.time);
  	li.setAttribute("class", "btn");
+ 	li.setAttribute("onclick", "seven()");
 
+
+    li.appendChild(liText);
+    ul.appendChild(li);
+  	document.body.appendChild(ul);
+  	
   	// 830==========================================================
     var litext2 = document.createTextNode(secondSched.time);
 
@@ -95,8 +80,6 @@ function startUI(){
     li2.appendChild(litext2);
     ul.appendChild(li2);
   	li2.setAttribute("onclick", "eight()");
-  	li2.setAttribute("class", "btn");
-
   	// 930==========================================================
   	var litext3 = document.createTextNode(thirdSched.time);
 
@@ -104,7 +87,6 @@ function startUI(){
     li3.appendChild(litext3);
     ul.appendChild(li3);
   	li3.setAttribute("onclick", "nine()");
-  	li3.setAttribute("class", "btn");
 }
 
 	
@@ -112,12 +94,17 @@ function startUI(){
 function back(){
 	document.body.innerHTML = "<h1> BGONG UI </h1> <button onclick='startUI()'> CANCEL </button>";
 
-
 }
-function seven(){
+
+//dito ma store yung may mga absent/late
+var firstSchedNew ={"time":"730-830",
+					"data": [ ]
+					};
+
+function seven(){		
 	console.log('seven');
 	document.body.innerHTML = "<h1 class='heading'> 730 </h1><button onclick=startUI()> Back </button>";
-
+//table
 	var table = document.createElement("table");
 	var body = document.getElementsByTagName("body");
 	var th1 = document.createElement('th');
@@ -125,7 +112,7 @@ function seven(){
 	var th3 = document.createElement('th');
 	var th4 = document.createElement('th');
 
-//table
+
 	var thtext1 = document.createTextNode("Name");
 	var thtext2 = document.createTextNode("Room");
 	var thtext3 = document.createTextNode("Absent");
@@ -135,34 +122,32 @@ function seven(){
 	th2.appendChild(thtext2);
 	th3.appendChild(thtext3);
 	th4.appendChild(thtext4);
-
 	table.appendChild(th1);
 	table.appendChild(th2);
 	table.appendChild(th3);
 	table.appendChild(th4);
-
 
 	table.setAttribute("border", "1");
 	table.setAttribute("cellspacing", "0");
 	table.setAttribute("cellpadding","0");
 
 	var td1,td2,td3,text1,text2,tr,option1,option2;
-	for(var i=0; i<firstSched.data.length; i++){
+	for(var i=0; i<storedFirstSched.data.length; i++){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");
 		td4=document.createElement("td");
 		button = document.createElement("button");
-		text1 = document.createTextNode(firstSched.data[i].name);
-		text2 = document.createTextNode(firstSched.data[i].room);
-		text3 = document.createTextNode("Absent");
-		text4 = document.createTextNode("temp");
+		text1 = document.createTextNode(storedFirstSched.data[i].name);
+		text2 = document.createTextNode(storedFirstSched.data[i].room);
+		text3 = document.createTextNode("Absent"+i);
+		text4 = document.createTextNode("late"+i);
 		td1.appendChild(text1);
 		td2.appendChild(text2);
 		button.appendChild(text3);
 		td3.appendChild(button);
-		td3.setAttribute("id", firstSched.data[i].absent);
+		button.setAttribute("id", "absent"+i);
 		td4.appendChild(text4);
 		tr.appendChild(td1);
 		tr.appendChild(td2);
@@ -170,9 +155,65 @@ function seven(){
 		tr.appendChild(td4);	
 		table.appendChild(tr);
 	 }
-
+	var saveBtn = document.createElement('button');
+	saveBtn.setAttribute("onclick", 'save()');
 	document.body.appendChild(table);
-}
+	//MANUAL GAMING
+		//730 row 1
+
+		if(firstSchedNew.data[0]==undefined){
+			document.getElementById("absent"+0).onclick = function() {
+				
+				alert("button "+storedFirstSched.data[0].name+" has been clicked");
+				var x = confirm("are you sure?");
+				if(x == true){ //store na sa bagong array tapos disable yung button
+					alert('nice');
+					firstSchedNew.data.push(storedFirstSched.data[0]);
+					firstSchedNew.data[0].absent = 1;
+					firstSchedNew.data[0].date = today;
+					document.getElementById("absent"+0).setAttribute("disabled", "");
+				}else{ // dont store anything
+					alert('wew');
+				}
+			};
+		}else{
+			document.getElementById("absent"+0).setAttribute("disabled", "");
+		}
+
+		//2ndrow
+		if(firstSchedNew.data[1]==undefined){
+			document.getElementById("absent"+1).onclick = function() {
+				
+				alert("button "+storedFirstSched.data[1].name+" has been clicked");
+				var x = confirm("are you sure?");
+				if(x == true){ //store na sa bagong array tapos disable yung button
+					alert('nice');
+					firstSchedNew.data.push(storedFirstSched.data[1]);
+					firstSchedNew.data[1].absent = 1; //problem di masave
+					firstSchedNew.data[1].date = today;
+					document.getElementById("absent"+1).setAttribute("disabled", "");
+				}else{ // dont store anything
+					alert('wew');
+				}
+			};
+		}else{
+			document.getElementById("absent"+1).setAttribute("disabled", "");
+		}
+
+		document.getElementById("absent"+2).onclick = function() {
+			alert("button "+storedFirstSched.data[2].name+" has been clicked");
+		};
+		document.getElementById("absent"+3).onclick = function() {
+			alert("button "+storedFirstSched.data[3].name+" has been clicked");
+		};
+		document.getElementById("absent"+4).onclick = function() {
+			alert("button "+storedFirstSched.data[4].name+" has been clicked");
+		};
+
+		
+	
+
+}//end seven
 
 function eight(){
 	console.log('eight');
