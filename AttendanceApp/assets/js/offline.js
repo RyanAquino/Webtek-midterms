@@ -116,7 +116,7 @@ function seven(){
 	var thtext1 = document.createTextNode("Name");
 	var thtext2 = document.createTextNode("Room");
 	var thtext3 = document.createTextNode("Absent");
-	var thtext4 = document.createTextNode("Late");
+	var thtext4 = document.createTextNode("Late(minutes)");
 
 	th1.appendChild(thtext1);
 	th2.appendChild(thtext2);
@@ -131,7 +131,7 @@ function seven(){
 	table.setAttribute("cellspacing", "0");
 	table.setAttribute("cellpadding","0");
 
-	var td1,td2,td3,text1,text2,tr,option1,option2;
+	var td1,td2,td3,text1,text2,tr,input;
 	for(var i=0; i<storedFirstSched.data.length; i++){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
@@ -139,16 +139,18 @@ function seven(){
 		td3=document.createElement("td");
 		td4=document.createElement("td");
 		button = document.createElement("button");
+		input = document.createElement("input")
+		input.setAttribute("type", "number");
+		input.setAttribute("id", "late"+i)
 		text1 = document.createTextNode(storedFirstSched.data[i].name);
 		text2 = document.createTextNode(storedFirstSched.data[i].room);
 		text3 = document.createTextNode("Absent"+i);
-		text4 = document.createTextNode("late"+i);
 		td1.appendChild(text1);
 		td2.appendChild(text2);
 		button.appendChild(text3);
 		td3.appendChild(button);
 		button.setAttribute("id", "absent"+i);
-		td4.appendChild(text4);
+		td4.appendChild(input);
 		tr.appendChild(td1);
 		tr.appendChild(td2);
 		tr.appendChild(td3);
@@ -167,10 +169,10 @@ function seven(){
 				alert("button "+storedFirstSched.data[0].name+" has been clicked");
 				var x = confirm("are you sure?");
 				if(x == true){ //store na sa bagong array tapos disable yung button
-					alert('nice');
+					console.log('nice');
 					firstSchedNew.data.push(storedFirstSched.data[0]);
-					firstSchedNew.data[0].absent = 1;
-					firstSchedNew.data[0].date = today;
+					firstSchedNew.data[firstSchedNew.data.length-1].absent = 1;
+					firstSchedNew.data[firstSchedNew.data.length-1].date = today;
 					document.getElementById("absent"+0).setAttribute("disabled", "");
 				}else{ // dont store anything
 					alert('wew');
@@ -189,8 +191,8 @@ function seven(){
 				if(x == true){ //store na sa bagong array tapos disable yung button
 					alert('nice');
 					firstSchedNew.data.push(storedFirstSched.data[1]);
-					firstSchedNew.data[1].absent = 1; //problem di masave
-					firstSchedNew.data[1].date = today;
+					firstSchedNew.data[firstSchedNew.data.length-1].absent = 1; //problem di masave
+					firstSchedNew.data[firstSchedNew.data.length-1].date = today;
 					document.getElementById("absent"+1).setAttribute("disabled", "");
 				}else{ // dont store anything
 					alert('wew');
