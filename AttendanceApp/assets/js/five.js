@@ -72,13 +72,26 @@ if(localStorage.getItem("saveChecker530")!="false"){
 					alert("button "+storedEleventhSched.data[0].name+" has been clicked");
 					var x = confirm("are you sure?");
 					if(x == true){ //store na sa bagong array tapos disable yung button
-						console.log('nice');
-						eleventhSchedNew.data.push(storedEleventhSched.data[0]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].absent = 1;
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
-						document.getElementById("absent"+0).setAttribute("disabled", "");
-						document.getElementById("late"+0).setAttribute("disabled", "");
-						document.getElementById("latebtn"+0).setAttribute("disabled", "");
+						var y = confirm("with substitute?");
+						if(y){
+							console.log('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[0]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["substitute"] = true;
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1;
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+0).setAttribute("disabled", "");
+							document.getElementById("late"+0).setAttribute("disabled", "");
+							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+						}else{
+							console.log('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[0]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1;
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+0).setAttribute("disabled", "");
+							document.getElementById("late"+0).setAttribute("disabled", "");
+							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+						}
+						
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -92,8 +105,8 @@ if(localStorage.getItem("saveChecker530")!="false"){
 						console.log('nice');
 						var lateValue = document.getElementById('late'+0).value;
 						eleventhSchedNew.data.push(storedEleventhSched.data[0]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].late = lateValue;
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["late"] = lateValue;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
 						document.getElementById("absent"+0).setAttribute("disabled", "");
 						document.getElementById("late"+0).setAttribute("disabled", "");
 						document.getElementById("latebtn"+0).setAttribute("disabled", "");
@@ -115,13 +128,26 @@ if(localStorage.getItem("saveChecker530")!="false"){
 					alert("button "+storedEleventhSched.data[1].name+" has been clicked");
 					var x = confirm("are you sure?");
 					if(x == true){ //store na sa bagong array tapos disable yung button
-						alert('nice');
-						eleventhSchedNew.data.push(storedEleventhSched.data[1]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].absent = 1; //problem di masave
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
-						document.getElementById("absent"+1).setAttribute("disabled", "");
-						document.getElementById("late"+1).setAttribute("disabled", "");
-						document.getElementById("latebtn"+1).setAttribute("disabled", "");
+						var y = confirm("with substitute?");
+						if(y){
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[1]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["substitute"] = true; 
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+1).setAttribute("disabled", "");
+							document.getElementById("late"+1).setAttribute("disabled", "");
+							document.getElementById("latebtn"+1).setAttribute("disabled", "");
+						}else{
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[1]); 
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+1).setAttribute("disabled", "");
+							document.getElementById("late"+1).setAttribute("disabled", "");
+							document.getElementById("latebtn"+1).setAttribute("disabled", "");
+						}
+						
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -135,8 +161,8 @@ if(localStorage.getItem("saveChecker530")!="false"){
 						console.log('nice');
 						var lateValue = document.getElementById('late'+1).value;
 						eleventhSchedNew.data.push(storedEleventhSched.data[1]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].late = lateValue;
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["late"] = lateValue;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
 						document.getElementById("absent"+1).setAttribute("disabled", "");
 						document.getElementById("late"+1).setAttribute("disabled", "");
 						document.getElementById("latebtn"+1).setAttribute("disabled", "");
@@ -158,13 +184,26 @@ if(localStorage.getItem("saveChecker530")!="false"){
 					alert("button "+storedEleventhSched.data[2].name+" has been clicked");
 					var x = confirm("are you sure?");
 					if(x == true){ //store na sa bagong array tapos disable yung button
-						alert('nice');
-						eleventhSchedNew.data.push(storedEleventhSched.data[2]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].absent = 1; //problem di masave
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
-						document.getElementById("absent"+2).setAttribute("disabled", "");
-						document.getElementById("late"+2).setAttribute("disabled", "");
-						document.getElementById("latebtn"+2).setAttribute("disabled", "");
+						var y = confirm("with substitute?");
+						if(y){
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[2]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["substitute"] = true; 
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+2).setAttribute("disabled", "");
+							document.getElementById("late"+2).setAttribute("disabled", "");
+							document.getElementById("latebtn"+2).setAttribute("disabled", "");
+						}else{
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[2]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+2).setAttribute("disabled", "");
+							document.getElementById("late"+2).setAttribute("disabled", "");
+							document.getElementById("latebtn"+2).setAttribute("disabled", "");
+						}
+						
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -178,8 +217,8 @@ if(localStorage.getItem("saveChecker530")!="false"){
 						console.log('nice');
 						var lateValue = document.getElementById('late'+2).value;
 						eleventhSchedNew.data.push(storedEleventhSched.data[2]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].late = lateValue;
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["late"] = lateValue;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
 						document.getElementById("absent"+2).setAttribute("disabled", "");
 						document.getElementById("late"+2).setAttribute("disabled", "");
 						document.getElementById("latebtn"+2).setAttribute("disabled", "");
@@ -200,13 +239,26 @@ if(localStorage.getItem("saveChecker530")!="false"){
 					alert("button "+storedEleventhSched.data[3].name+" has been clicked");
 					var x = confirm("are you sure?");
 					if(x == true){ //store na sa bagong array tapos disable yung button
-						alert('nice');
-						eleventhSchedNew.data.push(storedEleventhSched.data[3]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].absent = 1; //problem di masave
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
-						document.getElementById("absent"+3).setAttribute("disabled", "");
-						document.getElementById("late"+3).setAttribute("disabled", "");
-						document.getElementById("latebtn"+3).setAttribute("disabled", "");
+						var y = confirm("with substitute?");
+						if(y){
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[3]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["substitute"] = true;
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+3).setAttribute("disabled", "");
+							document.getElementById("late"+3).setAttribute("disabled", "");
+							document.getElementById("latebtn"+3).setAttribute("disabled", "");
+						}else{
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[3]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+3).setAttribute("disabled", "");
+							document.getElementById("late"+3).setAttribute("disabled", "");
+							document.getElementById("latebtn"+3).setAttribute("disabled", "");
+						}
+						
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -220,8 +272,8 @@ if(localStorage.getItem("saveChecker530")!="false"){
 						console.log('nice');
 						var lateValue = document.getElementById('late'+3).value;
 						eleventhSchedNew.data.push(storedEleventhSched.data[3]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].late = lateValue;
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["late"] = lateValue;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
 						document.getElementById("absent"+3).setAttribute("disabled", "");
 						document.getElementById("late"+3).setAttribute("disabled", "");
 						document.getElementById("latebtn"+3).setAttribute("disabled", "");
@@ -243,13 +295,26 @@ if(localStorage.getItem("saveChecker530")!="false"){
 					alert("button "+storedEleventhSched.data[4].name+" has been clicked");
 					var x = confirm("are you sure?");
 					if(x == true){ //store na sa bagong array tapos disable yung button
-						alert('nice');
-						eleventhSchedNew.data.push(storedEleventhSched.data[4]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].absent = 1; //problem di masave
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
-						document.getElementById("absent"+4).setAttribute("disabled", "");
-						document.getElementById("late"+4).setAttribute("disabled", "");
-						document.getElementById("latebtn"+4).setAttribute("disabled", "");
+						var y = confirm("with substitute?");
+						if(y){
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[4]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["substitute"] = true;
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+4).setAttribute("disabled", "");
+							document.getElementById("late"+4).setAttribute("disabled", "");
+							document.getElementById("latebtn"+4).setAttribute("disabled", "");
+						}else{
+							alert('nice');
+							eleventhSchedNew.data.push(storedEleventhSched.data[4]);
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+4).setAttribute("disabled", "");
+							document.getElementById("late"+4).setAttribute("disabled", "");
+							document.getElementById("latebtn"+4).setAttribute("disabled", "");
+						}
+						
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -263,8 +328,8 @@ if(localStorage.getItem("saveChecker530")!="false"){
 						console.log('nice');
 						var lateValue = document.getElementById('late'+4).value;
 						eleventhSchedNew.data.push(storedEleventhSched.data[4]);
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].late = lateValue;
-						eleventhSchedNew.data[eleventhSchedNew.data.length-1].date = today;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["late"] = lateValue;
+						eleventhSchedNew.data[eleventhSchedNew.data.length-1]["date"] = today;
 						document.getElementById("absent"+4).setAttribute("disabled", "");
 						document.getElementById("late"+4).setAttribute("disabled", "");
 						document.getElementById("latebtn"+4).setAttribute("disabled", "");

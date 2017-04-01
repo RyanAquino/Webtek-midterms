@@ -55,23 +55,24 @@ var info = document.getElementById("info");
 // 730				
 	var firstSched ={ "time":"7:30-8:30",
 						"data":[
-						{"name":"Jo Montes", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Maria Concepcion Clemente", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Rhoderic Makil", "room":"s425", "absent":null, "date":null, "late":null},
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null}
+						{"name":"Jo Montes", "room":"s542"},
+						{"name":"Maria Concepcion Clemente", "room":"s326"},
+						{"name":"Rhoderic Makil", "room":"s425"},
+						{"name":"Beverly Ferrer", "room":"s522"},
+						{"name":"Ali Mangaliag", "room":"s523"}
 						]
 					};
+
 	 localStorage.setItem("730", JSON.stringify(firstSched));
 	var storedFirstSched = JSON.parse(localStorage.getItem("730"));
 //830
 	var secondSched ={ "time":"8:30-9:30",
 						"data":[
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Jo Montes", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Rhoderic Makil", "room":"s425", "absent":null, "date":null, "late":null},
-						{"name":"Maria Concepcion Clemente", "room":"s326", "absent":null, "date":null, "late":null}
+						{"name":"Ali Mangaliag", "room":"s523"},
+						{"name":"Jo Montes", "room":"s542"},
+						{"name":"Beverly Ferrer", "room":"s522"},
+						{"name":"Rhoderic Makil", "room":"s425"},
+						{"name":"Maria Concepcion Clemente", "room":"s326"}
 						]
 					};
 	localStorage.setItem("830", JSON.stringify(secondSched));
@@ -79,11 +80,11 @@ var info = document.getElementById("info");
 //930
 	var thirdSched ={ "time":"9:30-10:30",
 						"data":[
-						{"name":"Bench Bacani", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Vicoy Ferrer", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Jo Montes", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Mark Jeff Parra", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Gerry Paul Genove", "room":"s425", "absent":null, "date":null, "late":null}
+						{"name":"Bench Bacani", "room":"s326"},
+						{"name":"Vicoy Ferrer", "room":"s522"},
+						{"name":"Jo Montes", "room":"s542"},
+						{"name":"Mark Jeff Parra", "room":"s523"},
+						{"name":"Gerry Paul Genove", "room":"s425"}
 						]
 					};
 	localStorage.setItem("930", JSON.stringify(thirdSched));
@@ -91,11 +92,11 @@ var info = document.getElementById("info");
 //1030
 	var fourthSched ={ "time":"10:30-11:30",
 						"data":[
-						{"name":"Lambert Famorca", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Jo Montes", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Maria Concepcion Clemente", "room":"s425", "absent":null, "date":null, "late":null}
+						{"name":"Lambert Famorca", "room":"s326"},
+						{"name":"Ali Mangaliag", "room":"s523"},
+						{"name":"Jo Montes", "room":"s542"},
+						{"name":"Beverly Ferrer", "room":"s522"},
+						{"name":"Maria Concepcion Clemente", "room":"s425"}
 						]
 					};
 	localStorage.setItem("1030", JSON.stringify(fourthSched));
@@ -103,11 +104,11 @@ var info = document.getElementById("info");
 //1130	
 	var fifthSched ={ "time":"11:30-12:30",
 						"data":[
-						{"name":"Jannet Etliong", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Laurence Balmeo", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Maria Concepcion Clemente", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Jonathan Ramirez", "room":"s425", "absent":null, "date":null, "late":null}
+						{"name":"Jannet Etliong", "room":"s542"},
+						{"name":"Laurence Balmeo", "room":"s522"},
+						{"name":"Ali Mangaliag", "room":"s523"},
+						{"name":"Maria Concepcion Clemente", "room":"s326"},
+						{"name":"Jonathan Ramirez", "room":"s425"}
 						]
 					};
 	localStorage.setItem("1130", JSON.stringify(fifthSched));
@@ -115,11 +116,11 @@ var info = document.getElementById("info");
 //1230
 	var sixthSched ={ "time":"12:30-1:30",
 						"data":[
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Rhoderic Makil", "room":"s425", "absent":null, "date":null, "late":null},
-						{"name":"Cess Mercado", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Dalos Miguel", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null}
+						{"name":"Ali Mangaliag", "room":"s523"},
+						{"name":"Rhoderic Makil", "room":"s425"},
+						{"name":"Cess Mercado", "room":"s326"},
+						{"name":"Dalos Miguel", "room":"s542"},
+						{"name":"Beverly Ferrer", "room":"s522"}
 						]
 					};
 	localStorage.setItem("1230", JSON.stringify(sixthSched));
@@ -127,11 +128,11 @@ var info = document.getElementById("info");
 //130
 	var seventhSched ={ "time":"1:30-2:30",
 						"data":[
-						{"name":"Dalos Miguel", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Laurence Balmeo", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Jo Montes", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Vicoy Ferrer", "room":"s425", "absent":null, "date":null, "late":null}
+						{"name":"Dalos Miguel", "room":"s326"},
+						{"name":"Laurence Balmeo", "room":"s522"},
+						{"name":"Ali Mangaliag", "room":"s523"},
+						{"name":"Jo Montes", "room":"s542"},
+						{"name":"Vicoy Ferrer", "room":"s425"}
 						]
 					};
 	localStorage.setItem("130", JSON.stringify(seventhSched));
@@ -139,11 +140,11 @@ var info = document.getElementById("info");
 //230
 	var eigthSched ={ "time":"2:30-3:30",
 						"data":[
-						{"name":"Mark Jeff Parra", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Lambert Famorca", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Jonathan Ramirez", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Rhoderic Makil", "room":"s425", "absent":null, "date":null, "late":null},
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null}
+						{"name":"Mark Jeff Parra", "room":"s326"},
+						{"name":"Lambert Famorca", "room":"s542"},
+						{"name":"Jonathan Ramirez", "room":"s523"},
+						{"name":"Rhoderic Makil", "room":"s425"},
+						{"name":"Beverly Ferrer", "room":"s522"}
 						]
 					};
 	localStorage.setItem("230", JSON.stringify(eigthSched));
@@ -151,11 +152,11 @@ var info = document.getElementById("info");
 //330
 	var ninthSched ={ "time":"3:30-4:30",
 						"data":[
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Mark Jeff Parra", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Jo Montes", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Randy Domantay", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Rhoderic Makil", "room":"s425", "absent":null, "date":null, "late":null}
+						{"name":"Beverly Ferrer", "room":"s522"},
+						{"name":"Mark Jeff Parra", "room":"s326"},
+						{"name":"Jo Montes", "room":"s542"},
+						{"name":"Randy Domantay", "room":"s523"},
+						{"name":"Rhoderic Makil", "room":"s425"}
 						]
 					};
 	localStorage.setItem("330", JSON.stringify(ninthSched));
@@ -163,11 +164,11 @@ var info = document.getElementById("info");
 //430
 	var tenthSched ={ "time":"4:30-5:30",
 						"data":[
-						{"name":"Vicoy Ferrer", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Randy Domantay", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Rhoderic Makil", "room":"s425", "absent":null, "date":null, "late":null},
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null}
+						{"name":"Vicoy Ferrer", "room":"s326"},
+						{"name":"Beverly Ferrer", "room":"s522"},
+						{"name":"Randy Domantay", "room":"s542"},
+						{"name":"Rhoderic Makil", "room":"s425"},
+						{"name":"Ali Mangaliag", "room":"s523"}
 						]
 					};
 	localStorage.setItem("430", JSON.stringify(tenthSched));
@@ -175,11 +176,11 @@ var info = document.getElementById("info");
 //530
 	var eleventhSched ={ "time":"5:30-6:30",
 						"data":[
-						{"name":"Ali Mangaliag", "room":"s523", "absent":null, "date":null, "late":null},
-						{"name":"Jo Montes", "room":"s542", "absent":null, "date":null, "late":null},
-						{"name":"Beverly Ferrer", "room":"s522", "absent":null, "date":null, "late":null},
-						{"name":"Maria Concepcion Clemente", "room":"s326", "absent":null, "date":null, "late":null},
-						{"name":"Rhoderic Makil", "room":"s425", "absent":null, "date":null, "late":null}
+						{"name":"Ali Mangaliag", "room":"s523"},
+						{"name":"Jo Montes", "room":"s542"},
+						{"name":"Beverly Ferrer", "room":"s522"},
+						{"name":"Maria Concepcion Clemente", "room":"s326"},
+						{"name":"Rhoderic Makil", "room":"s425"}
 						]
 					};
 	localStorage.setItem("530", JSON.stringify(eleventhSched));
