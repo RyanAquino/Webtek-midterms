@@ -1,7 +1,12 @@
 function seven(){	
 if(localStorage.getItem("saveChecker730")!="false"){	
-		console.log('seven');
-		document.body.innerHTML = "<h1 class='heading'> 730 </h1><button onclick=startUI()> Back </button>";
+	console.log('seven');
+	document.body.innerHTML = "<h1 class='heading'> 7:30 </h1>";
+	var backbutton = document.createElement("button");
+	backbutton.setAttribute("class","bckbtn");
+	backbutton.setAttribute("onclick","startUI()");
+	document.body.appendChild(backbutton);
+	backbutton.innerHTML = "Back";
 	//table
 		var table = document.createElement("table");
 		var body = document.getElementsByTagName("body");
@@ -53,6 +58,8 @@ if(localStorage.getItem("saveChecker730")!="false"){
 			td3.appendChild(button);
 			button.setAttribute("id", "absent"+i);
 			button2.setAttribute("id", "latebtn"+i); //submit button nang late
+			button.setAttribute("class","absent-btn");
+			button2.setAttribute("class","late-btn");  
 			td4.appendChild(input);
 			td4.appendChild(button2);
 			tr.appendChild(td1);
@@ -340,6 +347,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 			savebtntxt = document.createTextNode("Save");
 			savebtn.appendChild(savebtntxt);
 			savebtn.setAttribute("id", "savebtn");
+			savebtn.setAttribute("class", "save-btn");
 			document.body.appendChild(savebtn);
 
 
@@ -363,7 +371,12 @@ if(localStorage.getItem("saveChecker730")!="false"){
 function eight(){
 	if(localStorage.getItem("saveChecker830")!="false"){	
 		console.log('eight');
-		document.body.innerHTML = "<h1 class='heading'> 830 </h1><button onclick=startUI()> Back </button>";
+		document.body.innerHTML = "<h1 class='heading'> 8:30 </h1>";
+		var backbutton = document.createElement("button");
+		backbutton.setAttribute("class","bckbtn");
+		backbutton.setAttribute("onclick","startUI()");
+		document.body.appendChild(backbutton);
+		backbutton.innerHTML = "Back";
 	//table
 		var table = document.createElement("table");
 		var body = document.getElementsByTagName("body");
@@ -415,6 +428,8 @@ function eight(){
 			td3.appendChild(button);
 			button.setAttribute("id", "absent"+i);
 			button2.setAttribute("id", "latebtn"+i); //submit button nang late
+			button.setAttribute("class","absent-btn");
+			button2.setAttribute("class","late-btn"); 
 			td4.appendChild(input);
 			td4.appendChild(button2);
 			tr.appendChild(td1);
@@ -696,6 +711,7 @@ function eight(){
 			savebtntxt = document.createTextNode("Save");
 			savebtn.appendChild(savebtntxt);
 			savebtn.setAttribute("id", "savebtn");
+			savebtn.setAttribute("class", "save-btn");
 			document.body.appendChild(savebtn);
 
 

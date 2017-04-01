@@ -200,22 +200,32 @@ function startUI(){
 	document.body.innerHTML = "<h1 class='heading'> WELCOME </h1>" +
 								"<p class='alignCenter' id='info'> <br> Today is: "+ today + "<br>Select Schedule: </p>";
 								
-	//GUIDE MO
 	console.log(firstSched.time);
 	console.log(firstSched.data[0].name);	
-	// 730==========================================================
 	var body = document.getElementsByTagName("body");
-	var ul = document.createElement("ul");
+	//Div for arranging position
+	var div1 = document.createElement("div");
+ 	div1.setAttribute("class", "row")
+ 	var div2 = document.createElement("div");
+ 	div2.setAttribute("class", "menu col-3 col-m-3");
+ 	//UL
+ 	var ul = document.createElement("ul");
 	ul.setAttribute("id", "myTable");
- 	var li = document.createElement("li");
- 	var liText = document.createTextNode(firstSched.time);
- 	li.setAttribute("class", "btn");
+    
+    div2.appendChild(ul);
+    div1.appendChild(div2);
+  	document.body.appendChild(div1);
+
+  	
+  	// 730==========================================================
+  	var liText = document.createTextNode(firstSched.time);
+
+  	var li = document.createElement("li");
+  	li.appendChild(liText);
+  	ul.appendChild(li);
  	li.setAttribute("onclick", "seven()");
+ 	li.setAttribute("class", "btn");
 
-
-    li.appendChild(liText);
-    ul.appendChild(li);
-  	document.body.appendChild(ul);
   	
   	// 830==========================================================
     var litext2 = document.createTextNode(secondSched.time);
@@ -224,6 +234,7 @@ function startUI(){
     li2.appendChild(litext2);
     ul.appendChild(li2);
   	li2.setAttribute("onclick", "eight()");
+  	li2.setAttribute("class", "btn");
   	// 930==========================================================
   	var litext3 = document.createTextNode(thirdSched.time);
 
@@ -231,6 +242,7 @@ function startUI(){
     li3.appendChild(litext3);
     ul.appendChild(li3);
   	li3.setAttribute("onclick", "nine()");
+  	li3.setAttribute("class", "btn");
   	// 1030==========================================================
   	var litext4 = document.createTextNode(fourthSched.time);
 
@@ -238,6 +250,7 @@ function startUI(){
     li4.appendChild(litext4);
     ul.appendChild(li4);
   	li4.setAttribute("onclick", "ten()");
+  	li4.setAttribute("class", "btn");
   	// // 1130==========================================================
   	var litext5 = document.createTextNode(fifthSched.time);
 
@@ -245,6 +258,7 @@ function startUI(){
     li5.appendChild(litext5);
     ul.appendChild(li5);
   	li5.setAttribute("onclick", "eleven()");
+  	li5.setAttribute("class", "btn");
   	// // 1230==========================================================
   	var litext6 = document.createTextNode(sixthSched.time);
 
@@ -252,6 +266,7 @@ function startUI(){
     li6.appendChild(litext6);
     ul.appendChild(li6);
   	li6.setAttribute("onclick", "twelve()");
+  	li6.setAttribute("class", "btn");
   	// // 130==========================================================
   	var litext7 = document.createTextNode(seventhSched.time);
 
@@ -259,6 +274,7 @@ function startUI(){
     li7.appendChild(litext7);
     ul.appendChild(li7);
   	li7.setAttribute("onclick", "one()");
+  	li7.setAttribute("class", "btn");
   	// // 230==========================================================
   	var litext8 = document.createTextNode(eigthSched.time);
 
@@ -266,6 +282,7 @@ function startUI(){
     li8.appendChild(litext8);
     ul.appendChild(li8);
   	li8.setAttribute("onclick", "two()");
+  	li8.setAttribute("class", "btn");
   	// // 330==========================================================
   	var litext9 = document.createTextNode(ninthSched.time);
 
@@ -273,6 +290,7 @@ function startUI(){
     li9.appendChild(litext9);
     ul.appendChild(li9);
   	li9.setAttribute("onclick", "three()");
+  	li9.setAttribute("class", "btn");
   	// // 430==========================================================
   	var litext10 = document.createTextNode(tenthSched.time);
 
@@ -280,6 +298,7 @@ function startUI(){
     li10.appendChild(litext10);
     ul.appendChild(li10);
   	li10.setAttribute("onclick", "four()");
+  	li10.setAttribute("class", "btn");
   	// // 530==========================================================
   	var litext11 = document.createTextNode(eleventhSched.time);
 
@@ -287,6 +306,7 @@ function startUI(){
     li11.appendChild(litext11);
     ul.appendChild(li11);
   	li11.setAttribute("onclick", "nine()");
+  	li11.setAttribute("class", "btn");
 }
 
 	
