@@ -1,5 +1,9 @@
+var storedAbsentLate730 = null;
+
 function seven(){	
 if(localStorage.getItem("saveChecker730")!="false"){	
+		var storedFirstSchedtxt = localStorage.getItem("730");
+		var storedFirstSched = JSON.parse(storedFirstSchedtxt);
 		console.log('seven');
 		document.body.innerHTML = "<h1 class='heading'> 730 </h1><button onclick=startUI()> Back </button>";
 	//table
@@ -61,7 +65,26 @@ if(localStorage.getItem("saveChecker730")!="false"){
 			tr.appendChild(td4);	
 			table.appendChild(tr);
 		 }
+		 //present button
+		var presentBtn = document.createElement('button');
+		var presentText = document.createTextNode('All Present');
+		presentBtn.appendChild(presentText);
+		presentBtn.setAttribute("id", "allpresent730");
 		document.body.appendChild(table);
+		document.body.appendChild(presentBtn); 
+
+		document.getElementById("allpresent730").onclick = function(){
+			var y = confirm("Save Changes? You cannot undo this process")
+			if(y){
+			firstSchedNew.data.push({"allpresent" : true});
+			firstSchedNew.data[0]["date"] = today;
+			localStorage.setItem("absentLate730", JSON.stringify(firstSchedNew));
+			storedAbsentLate730 = JSON.parse(localStorage.getItem("absentLate730"));
+			localStorage.setItem("saveChecker730", "false");
+			startUI();
+			}
+		}
+
 		//MANUAL GAMING
 			//730 row 1
 
@@ -82,6 +105,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+0).setAttribute("disabled", "");
 							document.getElementById("late"+0).setAttribute("disabled", "");
 							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}else{ //without substitute
 							firstSchedNew.data.push(storedFirstSched.data[0]);
 							firstSchedNew.data[firstSchedNew.data.length-1]["absent"] = 1;
@@ -89,6 +113,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+0).setAttribute("disabled", "");
 							document.getElementById("late"+0).setAttribute("disabled", "");
 							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}
 					}else{ // dont store anything
 						alert('wew');
@@ -108,6 +133,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 						document.getElementById("absent"+0).setAttribute("disabled", "");
 						document.getElementById("late"+0).setAttribute("disabled", "");
 						document.getElementById("latebtn"+0).setAttribute("disabled", "");
+						document.getElementById("allpresent730").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -116,6 +142,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 				document.getElementById("absent"+0).setAttribute("disabled", "");
 				document.getElementById("late"+0).setAttribute("disabled", "");
 				document.getElementById("latebtn"+0).setAttribute("disabled", "");
+				document.getElementById("allpresent730").setAttribute("disabled", "");
 			}
 
 			//2ndrow
@@ -136,6 +163,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+0).setAttribute("disabled", "");
 							document.getElementById("late"+0).setAttribute("disabled", "");
 							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}else{ //without substitute
 							firstSchedNew.data.push(storedFirstSched.data[0]);
 							firstSchedNew.data[firstSchedNew.data.length-1]["absent"] = 1;
@@ -143,6 +171,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+0).setAttribute("disabled", "");
 							document.getElementById("late"+0).setAttribute("disabled", "");
 							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}
 					}else{ // dont store anything
 						alert('wew');
@@ -163,6 +192,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 						document.getElementById("absent"+1).setAttribute("disabled", "");
 						document.getElementById("late"+1).setAttribute("disabled", "");
 						document.getElementById("latebtn"+1).setAttribute("disabled", "");
+						document.getElementById("allpresent730").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -172,6 +202,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 				document.getElementById("absent"+1).setAttribute("disabled", "");
 				document.getElementById("late"+1).setAttribute("disabled", "");
 				document.getElementById("latebtn"+1).setAttribute("disabled", "");
+				document.getElementById("allpresent730").setAttribute("disabled", "");
 			}
 			//3rdrow
 			if(firstSchedNew.data[2]==undefined){
@@ -191,6 +222,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+2).setAttribute("disabled", "");
 							document.getElementById("late"+2).setAttribute("disabled", "");
 							document.getElementById("latebtn"+2).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}else{//without sub
 							firstSchedNew.data.push(storedFirstSched.data[0]);
 							firstSchedNew.data[firstSchedNew.data.length-1]["absent"] = 1;
@@ -198,6 +230,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+0).setAttribute("disabled", "");
 							document.getElementById("late"+0).setAttribute("disabled", "");
 							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}
 						
 					}else{ // dont store anything
@@ -218,6 +251,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 						document.getElementById("absent"+2).setAttribute("disabled", "");
 						document.getElementById("late"+2).setAttribute("disabled", "");
 						document.getElementById("latebtn"+2).setAttribute("disabled", "");
+						document.getElementById("allpresent730").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -226,6 +260,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 				document.getElementById("absent"+2).setAttribute("disabled", "");
 				document.getElementById("late"+2).setAttribute("disabled", "");
 				document.getElementById("latebtn"+2).setAttribute("disabled", "");
+				document.getElementById("allpresent730").setAttribute("disabled", "");
 			}
 			//4throw
 			if(firstSchedNew.data[3]==undefined){
@@ -245,6 +280,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+3).setAttribute("disabled", "");
 							document.getElementById("late"+3).setAttribute("disabled", "");
 							document.getElementById("latebtn"+3).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}else{ //without sub
 							alert('nice');
 							firstSchedNew.data.push(storedFirstSched.data[3]);
@@ -253,6 +289,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+3).setAttribute("disabled", "");
 							document.getElementById("late"+3).setAttribute("disabled", "");
 							document.getElementById("latebtn"+3).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}
 						
 					}else{ // dont store anything
@@ -273,6 +310,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 						document.getElementById("absent"+3).setAttribute("disabled", "");
 						document.getElementById("late"+3).setAttribute("disabled", "");
 						document.getElementById("latebtn"+3).setAttribute("disabled", "");
+						document.getElementById("allpresent730").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -282,6 +320,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 				document.getElementById("absent"+3).setAttribute("disabled", "");
 				document.getElementById("late"+3).setAttribute("disabled", "");
 				document.getElementById("latebtn"+3).setAttribute("disabled", "");
+				document.getElementById("allpresent730").setAttribute("disabled", "");
 			}
 			//5throw
 			if(firstSchedNew.data[4]==undefined){
@@ -301,6 +340,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+4).setAttribute("disabled", "");
 							document.getElementById("late"+4).setAttribute("disabled", "");
 							document.getElementById("latebtn"+4).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}else{//wtiout sub
 							firstSchedNew.data.push(storedFirstSched.data[4]);
 							firstSchedNew.data[firstSchedNew.data.length-1]["absent"] = 1; //problem di masave
@@ -308,6 +348,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							document.getElementById("absent"+4).setAttribute("disabled", "");
 							document.getElementById("late"+4).setAttribute("disabled", "");
 							document.getElementById("latebtn"+4).setAttribute("disabled", "");
+							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}
 					}else{ // dont store anything
 						alert('wew');
@@ -327,6 +368,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 						document.getElementById("absent"+4).setAttribute("disabled", "");
 						document.getElementById("late"+4).setAttribute("disabled", "");
 						document.getElementById("latebtn"+4).setAttribute("disabled", "");
+						document.getElementById("allpresent730").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -335,6 +377,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 				document.getElementById("absent"+4).setAttribute("disabled", "");
 				document.getElementById("late"+4).setAttribute("disabled", "");
 				document.getElementById("latebtn"+4).setAttribute("disabled", "");
+				document.getElementById("allpresent730").setAttribute("disabled", "");
 			}
 			savebtn = document.createElement("button");
 			savebtntxt = document.createTextNode("Save");
@@ -359,8 +402,10 @@ if(localStorage.getItem("saveChecker730")!="false"){
 	}		
 	
 }//end seven
-
+var storedAbsentLate830 = null;
 function eight(){
+	var storedSecondSchedtxt = localStorage.getItem("830");
+	var storedSecondSched = JSON.parse(storedSecondSchedtxt);
 	if(localStorage.getItem("saveChecker830")!="false"){	
 		console.log('eight');
 		document.body.innerHTML = "<h1 class='heading'> 830 </h1><button onclick=startUI()> Back </button>";
@@ -423,7 +468,25 @@ function eight(){
 			tr.appendChild(td4);	
 			table.appendChild(tr);
 		 }
+		 //present button
+		var presentBtn = document.createElement('button');
+		var presentText = document.createTextNode('All Present');
+		presentBtn.appendChild(presentText);
+		presentBtn.setAttribute("id", "allpresent830");
 		document.body.appendChild(table);
+		document.body.appendChild(presentBtn); 
+
+		document.getElementById("allpresent830").onclick = function(){
+			var y = confirm("Save Changes? You cannot undo this process")
+			if(y){
+			secondSchedNew.data.push({"allpresent" : true});
+			secondSchedNew.data[0]["date"] = today;
+			localStorage.setItem("absentLate830", JSON.stringify(secondSchedNew));
+			storedAbsentLate830 = JSON.parse(localStorage.getItem("absentLate830"));
+			localStorage.setItem("saveChecker830", "false");
+			startUI();
+			}
+		}
 		//MANUAL GAMING
 			//830 row 1
 
@@ -444,6 +507,7 @@ function eight(){
 							document.getElementById("absent"+0).setAttribute("disabled", "");
 							document.getElementById("late"+0).setAttribute("disabled", "");
 							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						}else{//without sub
 							secondSchedNew.data.push(storedSecondSched.data[0]);
 							secondSchedNew.data[secondSchedNew.data.length-1]["absent"] = 1;
@@ -451,6 +515,7 @@ function eight(){
 							document.getElementById("absent"+0).setAttribute("disabled", "");
 							document.getElementById("late"+0).setAttribute("disabled", "");
 							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						} 
 
 					}else{ // dont store anything
@@ -471,6 +536,7 @@ function eight(){
 						document.getElementById("absent"+0).setAttribute("disabled", "");
 						document.getElementById("late"+0).setAttribute("disabled", "");
 						document.getElementById("latebtn"+0).setAttribute("disabled", "");
+						document.getElementById("allpresent830").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -479,6 +545,7 @@ function eight(){
 				document.getElementById("absent"+0).setAttribute("disabled", "");
 				document.getElementById("late"+0).setAttribute("disabled", "");
 				document.getElementById("latebtn"+0).setAttribute("disabled", "");
+				document.getElementById("allpresent830").setAttribute("disabled", "");
 			}
 
 			//2ndrow
@@ -499,6 +566,7 @@ function eight(){
 							document.getElementById("absent"+1).setAttribute("disabled", "");
 							document.getElementById("late"+1).setAttribute("disabled", "");
 							document.getElementById("latebtn"+1).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						}else{ //without sub
 							secondSchedNew.data.push(storedSecondSched.data[1]); 
 							secondSchedNew.data[secondSchedNew.data.length-1]["absent"] = 1; //problem di masave
@@ -506,6 +574,7 @@ function eight(){
 							document.getElementById("absent"+1).setAttribute("disabled", "");
 							document.getElementById("late"+1).setAttribute("disabled", "");
 							document.getElementById("latebtn"+1).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						}
 						
 					}else{ // dont store anything
@@ -526,6 +595,7 @@ function eight(){
 						document.getElementById("absent"+1).setAttribute("disabled", "");
 						document.getElementById("late"+1).setAttribute("disabled", "");
 						document.getElementById("latebtn"+1).setAttribute("disabled", "");
+						document.getElementById("allpresent830").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -535,6 +605,7 @@ function eight(){
 				document.getElementById("absent"+1).setAttribute("disabled", "");
 				document.getElementById("late"+1).setAttribute("disabled", "");
 				document.getElementById("latebtn"+1).setAttribute("disabled", "");
+				document.getElementById("allpresent830").setAttribute("disabled", "");
 			}
 			//3rdrow
 			if(secondSchedNew.data[2]==undefined){
@@ -554,6 +625,7 @@ function eight(){
 							document.getElementById("absent"+2).setAttribute("disabled", "");
 							document.getElementById("late"+2).setAttribute("disabled", "");
 							document.getElementById("latebtn"+2).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						}else{
 							secondSchedNew.data.push(storedSecondSched.data[2]);
 							secondSchedNew.data[secondSchedNew.data.length-1]["absent"] = 1; //problem di masave
@@ -561,6 +633,7 @@ function eight(){
 							document.getElementById("absent"+2).setAttribute("disabled", "");
 							document.getElementById("late"+2).setAttribute("disabled", "");
 							document.getElementById("latebtn"+2).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						} //without sub
 						
 					}else{ // dont store anything
@@ -581,6 +654,7 @@ function eight(){
 						document.getElementById("absent"+2).setAttribute("disabled", "");
 						document.getElementById("late"+2).setAttribute("disabled", "");
 						document.getElementById("latebtn"+2).setAttribute("disabled", "");
+						document.getElementById("allpresent830").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -589,6 +663,7 @@ function eight(){
 				document.getElementById("absent"+2).setAttribute("disabled", "");
 				document.getElementById("late"+2).setAttribute("disabled", "");
 				document.getElementById("latebtn"+2).setAttribute("disabled", "");
+				document.getElementById("allpresent830").setAttribute("disabled", "");
 			}
 			//4throw
 			if(secondSchedNew.data[3]==undefined){
@@ -608,6 +683,7 @@ function eight(){
 							document.getElementById("absent"+3).setAttribute("disabled", "");
 							document.getElementById("late"+3).setAttribute("disabled", "");
 							document.getElementById("latebtn"+3).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						}else{//without sub
 							alert('nice');
 							secondSchedNew.data.push(storedSecondSched.data[3]);
@@ -616,6 +692,7 @@ function eight(){
 							document.getElementById("absent"+3).setAttribute("disabled", "");
 							document.getElementById("late"+3).setAttribute("disabled", "");
 							document.getElementById("latebtn"+3).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						}
 					}else{ // dont store anything
 						alert('wew');
@@ -635,6 +712,7 @@ function eight(){
 						document.getElementById("absent"+3).setAttribute("disabled", "");
 						document.getElementById("late"+3).setAttribute("disabled", "");
 						document.getElementById("latebtn"+3).setAttribute("disabled", "");
+						document.getElementById("allpresent830").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -644,6 +722,7 @@ function eight(){
 				document.getElementById("absent"+3).setAttribute("disabled", "");
 				document.getElementById("late"+3).setAttribute("disabled", "");
 				document.getElementById("latebtn"+3).setAttribute("disabled", "");
+				document.getElementById("allpresent830").setAttribute("disabled", "");
 			}
 			//5throw
 			if(secondSchedNew.data[4]==undefined){
@@ -663,6 +742,7 @@ function eight(){
 							document.getElementById("absent"+4).setAttribute("disabled", "");
 							document.getElementById("late"+4).setAttribute("disabled", "");
 							document.getElementById("latebtn"+4).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
 						}
 						
 					}else{ // dont store anything
@@ -683,6 +763,7 @@ function eight(){
 						document.getElementById("absent"+4).setAttribute("disabled", "");
 						document.getElementById("late"+4).setAttribute("disabled", "");
 						document.getElementById("latebtn"+4).setAttribute("disabled", "");
+						document.getElementById("allpresent830").setAttribute("disabled", "");
 					}else{ // dont store anything
 						alert('wew');
 					}
@@ -691,6 +772,7 @@ function eight(){
 				document.getElementById("absent"+4).setAttribute("disabled", "");
 				document.getElementById("late"+4).setAttribute("disabled", "");
 				document.getElementById("latebtn"+4).setAttribute("disabled", "");
+				document.getElementById("allpresent830").setAttribute("disabled", "");
 			}
 			savebtn = document.createElement("button");
 			savebtntxt = document.createTextNode("Save");
