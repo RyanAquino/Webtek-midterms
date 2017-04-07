@@ -1,0 +1,47 @@
+.bckbtn{
+    list-style-type: none;
+    background-color:#1a8cff;
+    border: 1px solid #00284d;
+    color:#ffffff;
+    text-align:center;
+    padding:10px;
+    font-family:Courier New;
+    font-size:larger;
+    display:block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.bckbtn:hover{
+    background-color:#004d99;
+}
+
+.save-btn{
+    background-color:#1a8cff;
+    border: 1px solid #00284d;
+    color:#ffffff;
+    text-align:center;
+    padding:3px;
+    font-family:Courier New;
+    font-size:larger;
+    display:inline-block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.save-btn:hover{
+    background-color:#004d99;
+}
+
+table, th, td{
+    font-family: Courier New;
+    margin: 5px;
+}
+
+table{
+    background-color: #CB7003;
+}
+tr:nth-child(even){
+    background-color: #4B5372;
+}
