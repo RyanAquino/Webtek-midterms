@@ -1,0 +1,50 @@
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+        border: 0;
+        margin: 0;
+    }
+
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    td{
+        border:none;
+        position:relative;
+    }
+    table td:nth-of-type(4), td:nth-of-type(3) { 
+        /* Behave  like a "row" */
+        padding: 0px 0px 0px 0px;
+        border: none;
+        position: relative;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    tr { 
+        border: 2px solid;
+        border-color: black; 
+        margin-bottom: 10px;
+        padding-right: 10px;
+    }
+
+    th{
+        display: none;
+    }
+
+    td:nth-of-type(1){
+    text-align: center;
+    padding:0px 0px 0px 0px;
+    }
+    td:nth-of-type(2){
+    text-align: center;
+    padding:0px 0px 0px 0px;
+    }
+
+}
