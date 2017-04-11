@@ -78,6 +78,42 @@
 	cursor: pointer;
 }
 
+#recordList{
+	text-align: center;
+	font-size: 1.7em;
+	border-radius: 25px;
+    background:linear-gradient(to bottom, #004d99 5%, #1E90FF 100%);
+	margin: 0 auto;
+    margin-bottom: 5px;
+    padding-top: 15px; 
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%; 
+    color:  #F8F8FF;
+    box-shadow: 7px 7px 39px 1px rgba(0,0,0,1);
+	max-width: 90%;
+    transition: all .3s ease-in-out; 
+    transition-delay: .0.02s
+}
+
+.recordTotal{
+	text-align: center;
+	font-size: 1.7em;
+	border-radius: 25px;
+    background:linear-gradient(to bottom, #004d99 5%, #1E90FF 100%);
+	margin: 0 auto;
+    margin-bottom: 5px;
+    padding-top: 15px; 
+    padding-bottom: 15px;
+    width: 75%;
+    height: 100%; 
+    color:  #F8F8FF;
+    box-shadow: 7px 7px 39px 1px rgba(0,0,0,1);
+	max-width: 90%;
+    transition: all .3s ease-in-out; 
+    transition-delay: .0.02s
+}
+
 .bckbtn{
     height: 70px;
     width: 70px;
