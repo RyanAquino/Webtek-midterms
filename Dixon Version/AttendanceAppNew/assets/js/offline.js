@@ -294,6 +294,7 @@ function startUI() {
 function retrieveReport() {
 	 //document.body.innerHTML = "<button class=bckbtn onclick=startUI()> Back </button>";
 	document.body.innerHTML ="<h1> Report of the Day</h1>" + "<br> <h2> Select instructors to view summarized reports. </h2>" ;
+
 	var backbutton = document.createElement("button");//--------------------------------------------------------------- BACK BUTTON AF
 	var backbuttonInstr = document.createElement("button");
 	backbutton.setAttribute("class","bckbtn");
@@ -303,6 +304,9 @@ function retrieveReport() {
 	backbuttonInstr.setAttribute("onclick","retrieveReport()");
 	backbutton.innerHTML = "Back";
 	backbuttonInstr.innerHTML = "Back";
+
+	document.body.appendChild(backbutton);
+
 	var instructors= [
 			 					"Ali Mangaliag",
 								"Bench Bacani",
