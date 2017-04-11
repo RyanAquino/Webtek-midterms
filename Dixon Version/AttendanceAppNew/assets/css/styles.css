@@ -9,6 +9,7 @@
 }
 h2{
 	font-size: 2.5em;
+    margin: 0 auto;
 }
 body{
 	background: url("../img/employee.jpg");
@@ -18,53 +19,61 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
     height: auto;
 }
+
+
 .alignCenter {
 	text-align: center;
 }
 .sched {
 	text-align: center;
+    font-family: digiclock;
 	font-size: 1.7em;
 	border-radius: 25px;
-    background: #1E90FF;
-	margin: 15px;
+    background:linear-gradient(to bottom, #004d99 5%, #1E90FF 100%);
+	margin: 0 auto;
+    margin-bottom: 5px;
     padding-top: 15px; 
+    padding-bottom: 15px;
     width: 500px;
-    height: 40px; 
-    margin-left: auto;
-    margin-right: 30%;
+    height: 55px; 
     color:  #F8F8FF;
     box-shadow: 7px 7px 39px 1px rgba(0,0,0,1);
 	max-width: 90%;
+    transition: all .3s ease-in-out; 
+    transition-delay: .0.02s
 }
 .sched:hover{
-	transform: scale(1.3);
-	background-color: #20B2AA
-	color: black;
+    background:linear-gradient(to bottom, #79bbff 5%, #1E90FF 100%);
+	transform: scale(1.1);
+    text-shadow: 1px 0px 20px #191E4C;
+	color: #03084A;
 	cursor: pointer;
 }
-.heading{
+h1{
 	font-size: 3em;
 	text-align: center;
-	font-family: Adlanta;
+	font-family: plusSvn;
 	color: #F8F8FF;
 }
+.heading{
+    font-family: plusSvn;
+}
 #info {
-	font-family: AppleGaramond;
-	font-size: 30px;
+	font-family: plusSvn;
+	font-size: 20px;
 	color:  #F8F8FF;
 }	
 li {
 	list-style-type: none;
 }
 .centerBtns {
-    
-}position: relative;
-    align-items: center;
+    position: relative;
+    text-align: center;
     display: flex;
     justify-content: center;
+}
 .centerBtns button{
 	background-color: #4CAF50;
     border: none;
@@ -74,7 +83,7 @@ li {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 5px 5px auto;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
