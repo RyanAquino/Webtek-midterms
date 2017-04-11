@@ -333,7 +333,9 @@ function retrieveReport() {
 			var records = JSON.parse(xmlhttp.responseText);
 			//html
 			 var body = document.getElementsByTagName("body");
-			 var ul = document.createElement("ul");			 
+			 var ul = document.createElement("ul");
+			 ul.setAttribute("id", "recordList");//-----------=-=-=--------==-=------------------------------------------------
+
 			//records.details[0].data[0]; to access what's inside
 			//localStorage[records] = JSON.stringify(records); Gawing string yung records
 			for(var i = 0; i<instructors.length; i++){
@@ -364,7 +366,8 @@ function retrieveReport() {
 								x.appendChild(xText);
 								ul.appendChild(x);
 								totalAbsent+=absent; 
-								var ptotal1 = document.createElement("p")
+								var ptotal1 = document.createElement("p");
+								ptotal1.setAttribute("class", "recordTotal"); //-------------------------------------------------------------------
 								var ptext1 = document.createTextNode("Total Absents: "+totalAbsent);
 								ptotal1.appendChild(ptext1);
 								
@@ -375,7 +378,8 @@ function retrieveReport() {
 								var yText = document.createTextNode("Late "+ records.details[i].data[j].late+ " mins in "+records.details[i].time+ " last "+records.details[i].data[j].date );
 								y.appendChild(yText);
 								ul.appendChild(y);
-								var ptotal2 = document.createElement("p")
+								var ptotal2 = document.createElement("p");
+								ptotal2.setAttribute("class", "recordTotal"); //-------------------------------------------------------------------
 								var ptext2 = document.createTextNode("Total Lates : "+totalLate+" mins");
 								ptotal2.appendChild(ptext2);
 								
