@@ -1,18 +1,18 @@
 .timehead{
     font-family:digiclock;
-    font-size: 600%;
+    font-size: 500%;
     
 }
 
 .timehead:hover{
-    animation: neon 1.5s ease-in-out infinite alternate;
+    animation: neon 2.0s ease-in-out;
 }
 #savebtn{
     margin-left: 5px;
     border-radius: 20px;
     list-style-type: none;
-    background:linear-gradient(to bottom, #79bbff 5%, #1a8cff 100%);
-    border: 1px solid #00284d;
+    background:linear-gradient(to bottom, #3177E7 5%, #0345AF 100%);
+    border: 5px outset #00284d;
     color:#ffffff;
     text-align:center;
     padding:10px;
@@ -26,16 +26,25 @@
     transition-delay: .0.02s
 }
 #savebtn:hover{
-    background:linear-gradient(to bottom, #79bbff 5%, #004d99 100%);
+    background:linear-gradient(to bottom, #4FEB25 5%, #2A9E0B 100%);
     transform: scale(1.2);
 }
+
+#savebtn:active{
+    background:linear-gradient(to bottom, #2A9E0B 5%, #4FEB25 100%);
+}
+
+#savebtn:focus{
+    outline: none;
+}
+
 .allpresent{
     border-radius: 20px;
     margin-right: 10px;
     margin-left: 80%;
     list-style-type: none;
-    background:linear-gradient(to bottom, #79bbff 5%, #1a8cff 100%);
-    border: 1px solid #00284d;
+    background:linear-gradient(to bottom, #3177E7 5%, #0345AF 100%);
+    border: 5px outset #00284d;
     color:#ffffff;
     text-align:center;
     padding:10px;
@@ -49,77 +58,43 @@
     transition-delay: .0.02s
 }
 .allpresent:hover{
-    background:linear-gradient(to bottom, #79bbff 5%, #004d99 100%);
+    background:linear-gradient(to bottom, #5C21FA 5%, #300A98 100%);
     transform: scale(1.2);
 }
 
+.allpresent:active{
+    background:linear-gradient(to bottom, #300A98 5%, #5C21FA 100%);
+}
+
+.allpresent:focus{
+    outline: none;
+}
+
 .records{
-	text-align: center;
-	font-size: 1.7em;
-	border-radius: 25px;
-    background:linear-gradient(to bottom, #004d99 5%, #1E90FF 100%);
-	margin: 0 auto;
-    margin-bottom: 5px;
-    padding-top: 15px; 
-    padding-bottom: 15px;
-    width: 500px;
-    height: 55px; 
-    color:  #F8F8FF;
-    box-shadow: 7px 7px 39px 1px rgba(0,0,0,1);
-	max-width: 90%;
-    transition: all .3s ease-in-out; 
-    transition-delay: .0.02s
-}
-.records:hover{
-	transform: scale(1.3);
-    background:linear-gradient(to bottom, #79bbff 5%, #1E90FF 100%);
-    text-shadow: 1px 0px 20px #191E4C;
-	color: black;
-	cursor: pointer;
-}
-
-#recordList{
-	text-align: center;
-	font-size: 1.7em;
-	border-radius: 25px;
-    background:linear-gradient(to bottom, #004d99 5%, #1E90FF 100%);
-	margin: 0 auto;
-    margin-bottom: 5px;
-    padding-top: 15px; 
-    padding-bottom: 15px;
-    width: 75%;
-    height: 100%; 
-    color:  #F8F8FF;
-    box-shadow: 7px 7px 39px 1px rgba(0,0,0,1);
-	max-width: 90%;
+    background:linear-gradient(to bottom, #378de5 5%, #24495E 100%);
+    font-family: Golden Ratio;
+    margin: 2px;
+    height: 35px;
+    width: 50%;
+    color: #ffffff;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0px 1px;
+    text-align: center;
     transition: all .3s ease-in-out; 
     transition-delay: .0.02s
 }
 
-.recordTotal{
-	text-align: center;
-	font-size: 1.7em;
-	border-radius: 25px;
-    background:linear-gradient(to bottom, #004d99 5%, #1E90FF 100%);
-	margin: 0 auto;
-    margin-bottom: 5px;
-    padding-top: 15px; 
-    padding-bottom: 15px;
-    width: 75%;
-    height: 100%; 
-    color:  #F8F8FF;
-    box-shadow: 7px 7px 39px 1px rgba(0,0,0,1);
-	max-width: 90%;
-    transition: all .3s ease-in-out; 
-    transition-delay: .0.02s
+.records:hover {
+    transform: scale(1.3);
 }
 
 .bckbtn{
     height: 70px;
     width: 70px;
     list-style-type: none;
-    background:linear-gradient(to bottom, #79bbff 5%, #1a8cff 100%);
-    border: 1px solid #00284d;
+    background:linear-gradient(to bottom, #3177E7 5%, #0345AF 100%);
+    border: 5px outset #00284d;
     border-radius:50%;
     color:#ffffff;
     text-align:center;
@@ -134,7 +109,15 @@
 }
 .bckbtn:hover{
     transform: scale(1.2);
-    background:linear-gradient(to bottom, #79bbff 5%, #004d99 100%);
+    background:linear-gradient(to bottom, #0F76DC 5%, #004d99 100%);
+}
+
+.bckbtn:active{
+    background:linear-gradient(to bottom, #004d99 5%, #0F76DC 100%);
+}
+
+.bckbtn:focus{
+    outline: none;
 }
 
 .inline{
@@ -142,18 +125,24 @@
 }
 
 table, th, td{
+    position: static;
     font-family: Golden Ratio;
     margin: 0 auto;
     color: #ffffff;
     border: hidden;
-    border-spacing: 0px 10px;
+    border-spacing: 0px 5px;
     text-align: center;
+
 
 }
 th{
+    border-spacing:;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
     color:#ffffff;
-    font-family: plusSvn;
-    font-size: x-large;
+    font-family: Golden Ratio;
+    font-size: larger;
+    background:linear-gradient(to bottom, #2C3646 5%, #060E1B 100%);
 
 }
 td:nth-of-type(1){
@@ -169,15 +158,18 @@ td:nth-of-type(2){
 td:nth-of-type(3), td:nth-of-type(4){
     padding: 20px 50px 20px 50px;
 }
+
 tr{ 
-    background:linear-gradient(to bottom, #378de5 5%, #24495E 100%);
+
+    background:linear-gradient(to bottom, #004d99 5%, #041837 100%);
+
 }
-tr:nth-child(even){
+tsr{
     background:linear-gradient(to bottom, #378de5 5%, #2C3E50 100%);
 }
 
 .status-btn{
-    border: 2px solid #A3E4D7;
+    border: 3px outset #A3E4D7;
     color:#ffffff;
     text-align:center;
     padding:6px;
@@ -189,25 +181,39 @@ tr:nth-child(even){
     margin-top: 5px;
     text-shadow:2px -1px 14px #0a183d;
     border-radius:18px;
+    cursor: pointer;
 }
-
 
 td:nth-of-type(4) .status-btn{
-    background:linear-gradient(to bottom, #D16C07 5%, #F79A3D 100%);
+    background:linear-gradient(to bottom, #3177E7 5%, #0345AF 100%);
 }
-     
+
 td:nth-of-type(4) .status-btn:hover{
-    background:linear-gradient(to bottom, #F79A3D 5%, #D16C07 100%);
+    background:linear-gradient(to bottom, #F79A3D 10%, #D16C07 100%);
+}
+
+td:nth-of-type(4) .status-btn:active{
+    background:linear-gradient(to bottom, #D16C07 5%, #F79A3D 100%);
 }
 
 td:nth-of-type(3) .status-btn{
-     background:linear-gradient(to bottom, #C31005 5%, #F3493E 100%);
+    background:linear-gradient(to bottom, #3177E7 5%, #0345AF 100%);
 }
 
 td:nth-of-type(3) .status-btn:hover{
      background:linear-gradient(to bottom, #F3493E 5%, #C31005 100%);
 }
 
+td:nth-of-type(3) .status-btn:active{
+
+     background:linear-gradient(to bottom, #C31005 5%, #F3493E 100%);
+}
+
+
+td:nth-of-type(3) .status-btn:focus, td:nth-of-type(4) .status-btn:focus {
+    outline: none;
+}
+     
 
     
 input[type=number]{
@@ -218,6 +224,7 @@ input[type=number]{
         font-family: digiclock;
         text-align: center;
         font-size: x-large;
+        color:#B45507;
 
 }
 input[type=number]::-webkit-inner-spin-button, 
@@ -235,7 +242,7 @@ input[type=number]:disabled {
     
 }
 td:nth-of-type(4) .status-btn:disabled, td:nth-of-type(3) .status-btn:disabled {
-    background: #878991;   
+     background:linear-gradient(to bottom, #42484F 5%, #777D84 100%);
 }
 
 

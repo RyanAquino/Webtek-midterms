@@ -26,16 +26,21 @@ body{
 .alignCenter {
 	text-align: center;
 }
+
+#schedlist{
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;}
+
 .sched {
 	text-align: center;
     font-family: digiclock;
-	font-size: 1.7em;
+	font-size: xx-large;
 	border-radius: 25px;
-    background:linear-gradient(to bottom, #004d99 5%, #1E90FF 100%);
+    background:linear-gradient(to bottom, #3177E7 5%, #0345AF 100%);
 	margin: 0 auto;
     margin-bottom: 5px;
-    padding-top: 15px; 
-    padding-bottom: 15px;
+    padding: 15px 40px 15px 40px;
     width: 500px;
     height: 55px; 
     color:  #F8F8FF;
@@ -45,12 +50,20 @@ body{
     transition-delay: .0.02s
 }
 .sched:hover{
-    background:linear-gradient(to bottom, #79bbff 5%, #1E90FF 100%);
+    background:linear-gradient(to bottom, #4162DC 5%, #202DD5 100%);
 	transform: scale(1.1);
     text-shadow: 1px 0px 20px #191E4C;
-	color: #03084A;
 	cursor: pointer;
+    font-size: 30px;
+    
 }
+
+.sched:active{
+    position:relative;
+    top:1px;
+}
+
+
 h1{
 	font-size: 3em;
 	text-align: center;
@@ -73,15 +86,17 @@ li {
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
 .centerBtns button{
-	background-color: #4CAF50;
+	background:linear-gradient(to bottom, #0CC236 5%, #087A22 100%);
     border: none;
     color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-family: plusSvn;
     font-size: 16px;
     margin: 5px 5px auto;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -89,8 +104,19 @@ li {
     cursor: pointer;
 }
  .centerBtns button:hover {
-    background-color: #555555;
-    color: white;
+    transform: scale(1.05);
+    background:linear-gradient(to bottom, #12B030 5%, #075115 100%);
+    border-radius: 5px;
+}
+
+.centerBtns button:active {
+    background:linear-gradient(to bottom, #075115 5%, #12B030 100%);
+
+}
+
+.centerBtns button:focus {
+ outline: none;
+
 }
 
 

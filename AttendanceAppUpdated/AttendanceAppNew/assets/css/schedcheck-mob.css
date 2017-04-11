@@ -62,5 +62,20 @@ only screen and (max-width: 760px),
     margin-bottom: 50px;
     } 
     
+    td:nth-of-type(4) .status-btn{
+    background:linear-gradient(to bottom, #F79A3D 10%, #D16C07 100%);
+    }
+
+    td:nth-of-type(4) .status-btn:active{
+    background:linear-gradient(to bottom, #D16C07 5%, #F79A3D 100%);
+    }
+
+    td:nth-of-type(3) .status-btn{
+    background:linear-gradient(to bottom, #F3493E 5%, #C31005 100%);
+    }
+
+    td:nth-of-type(3) .status-btn:active{
+    background:linear-gradient(to bottom, #C31005 5%, #F3493E 100%);
+    }
 
 }
