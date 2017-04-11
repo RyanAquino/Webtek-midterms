@@ -169,9 +169,10 @@ function startUI() {
 		var storedTenthSched = JSON.parse(localStorage.getItem("430"));
 		var storedEleventhSched = JSON.parse(localStorage.getItem("530"));
 		var ul = document.createElement("ul");
+		ul.setAttribute("class","col-m-8 col-12");
+		ul.setAttribute("id","schedlist");
+
 		
-	  	
-	  	var ul = document.createElement("ul");
 	  	var litext1 = document.createTextNode(storedFirstSched.time);
 	  	var li1 = document.createElement("li");
 	  	li1.appendChild(litext1);
