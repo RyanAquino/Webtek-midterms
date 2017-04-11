@@ -12,6 +12,17 @@ function reset(){
 				ninthSchedNew.data.length = 0;	
 				tenthSchedNew.data.length = 0;
 				eleventhSchedNew.data.length = 0;
+				storedAbsentLate730.data.length = 0;
+				storedAbsentLate830.data.length = 0;
+				storedAbsentLate930.data.length = 0;
+				storedAbsentLate1030.data.length = 0;
+				storedAbsentLate1130.data.length = 0;
+				storedAbsentLate1230.data.length = 0;
+				storedAbsentLate130.data.length = 0;
+				storedAbsentLate230.data.length = 0;
+				storedAbsentLate330.data.length = 0;
+				storedAbsentLate430.data.length = 0;
+				storedAbsentLate530.data.length = 0;
 				localStorage.setItem("saveChecker730", "true");
 				localStorage.setItem("saveChecker830", "true");
 				localStorage.setItem("saveChecker930", "true");

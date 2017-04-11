@@ -28,16 +28,16 @@ function summary(){
 		table.appendChild(th4);
 		
 
-		for(var i = 0; i < firstSchedNew.data.length; i++){
-		if(firstSchedNew.data[i].absent != undefined && firstSchedNew.data[i].late == undefined){
+		for(var i = 0; i < storedAbsentLate730.data.length; i++){
+		if(storedAbsentLate730.data[i].absent != undefined && storedAbsentLate730.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(firstSchedNew.time);
-		text2 = document.createTextNode(firstSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate730.time);
+		text2 = document.createTextNode(storedAbsentLate730.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -54,17 +54,17 @@ function summary(){
 
 		table.appendChild(tr);
 				
-		}else if (firstSchedNew.data[i].absent == undefined && firstSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate730.data[i].absent == undefined && storedAbsentLate730.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(firstSchedNew.time);
-		text2 = document.createTextNode(firstSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate730.time);
+		text2 = document.createTextNode(storedAbsentLate730.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(firstSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate730.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -80,16 +80,16 @@ function summary(){
 	 	}
 	 	
 	 	
-	 	for(var i = 0; i < secondSchedNew.data.length; i++){
-		if(secondSchedNew.data[i].absent != undefined && secondSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate830.data.length; i++){
+		if(storedAbsentLate830.data[i].absent != undefined && storedAbsentLate830.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(secondSchedNew.time);
-		text2 = document.createTextNode(secondSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate830.time);
+		text2 = document.createTextNode(storedAbsentLate830.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -103,17 +103,17 @@ function summary(){
 		tr.appendChild(td4);
 		table.appendChild(tr);
 						
-		}else if (secondSchedNew.data[i].absent == undefined && secondSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate830.data[i].absent == undefined && storedAbsentLate830.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(secondSchedNew.time);
-		text2 = document.createTextNode(secondSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate830.time);
+		text2 = document.createTextNode(storedAbsentLate830.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(secondSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate830.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -127,16 +127,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < thirdSchedNew.data.length; i++){
-		if(thirdSchedNew.data[i].absent != undefined && thirdSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate930.data.length; i++){
+		if(storedAbsentLate930.data[i].absent != undefined && storedAbsentLate930.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(thirdSchedNew.time);
-		text2 = document.createTextNode(thirdSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate930.time);
+		text2 = document.createTextNode(storedAbsentLate930.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -149,17 +149,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (thirdSchedNew.data[i].absent == undefined && thirdSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate930.data[i].absent == undefined && storedAbsentLate930.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(thirdSchedNew.time);
-		text2 = document.createTextNode(thirdSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate930.time);
+		text2 = document.createTextNode(storedAbsentLate930.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(thirdSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate930.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -173,16 +173,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < fourthSchedNew.data.length; i++){
-		if(fourthSchedNew.data[i].absent != undefined && fourthSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate1030.data.length; i++){
+		if(storedAbsentLate1030.data[i].absent != undefined && storedAbsentLate1030.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(fourthSchedNew.time);
-		text2 = document.createTextNode(fourthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate1030.time);
+		text2 = document.createTextNode(storedAbsentLate1030.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -195,17 +195,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (fourthSchedNew.data[i].absent == undefined && fourthSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate1030.data[i].absent == undefined && storedAbsentLate1030.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(fourthSchedNew.time);
-		text2 = document.createTextNode(fourthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate1030.time);
+		text2 = document.createTextNode(storedAbsentLate1030.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(fourthSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate1030.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -219,16 +219,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < fifthSchedNew.data.length; i++){
-		if(fifthSchedNew.data[i].absent != undefined && fifthSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate1130.data.length; i++){
+		if(storedAbsentLate1130.data[i].absent != undefined && storedAbsentLate1130.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(fifthSchedNew.time);
-		text2 = document.createTextNode(fifthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate1130.time);
+		text2 = document.createTextNode(storedAbsentLate1130.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -241,17 +241,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (fifthSchedNew.data[i].absent == undefined && fifthSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate1130.data[i].absent == undefined && storedAbsentLate1130.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(fifthSchedNew.time);
-		text2 = document.createTextNode(fifthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate1130.time);
+		text2 = document.createTextNode(storedAbsentLate1130.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(fifthSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate1130.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -265,16 +265,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < sixthSchedNew.data.length; i++){
-		if(sixthSchedNew.data[i].absent != undefined && sixthSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate1230.data.length; i++){
+		if(storedAbsentLate1230.data[i].absent != undefined && storedAbsentLate1230.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");
 
-		text1 = document.createTextNode(sixthSchedNew.time);
-		text2 = document.createTextNode(sixthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate1230.time);
+		text2 = document.createTextNode(storedAbsentLate1230.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -287,17 +287,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (sixthSchedNew.data[i].absent == undefined && sixthSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate1230.data[i].absent == undefined && storedAbsentLate1230.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(sixthSchedNew.time);
-		text2 = document.createTextNode(sixthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate1230.time);
+		text2 = document.createTextNode(storedAbsentLate1230.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(sixthSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate1230.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -311,16 +311,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < seventhSchedNew.data.length; i++){
-		if(seventhSchedNew.data[i].absent != undefined && seventhSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate130.data.length; i++){
+		if(storedAbsentLate130.data[i].absent != undefined && storedAbsentLate130.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(seventhSchedNew.time);
-		text2 = document.createTextNode(seventhSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate130.time);
+		text2 = document.createTextNode(storedAbsentLate130.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -333,17 +333,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (seventhSchedNew.data[i].absent == undefined && seventhSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate130.data[i].absent == undefined && storedAbsentLate130.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(seventhSchedNew.time);
-		text2 = document.createTextNode(seventhSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate130.time);
+		text2 = document.createTextNode(storedAbsentLate130.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(seventhSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate130.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -357,16 +357,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < eightSchedNew.data.length; i++){
-		if(eightSchedNew.data[i].absent != undefined && eightSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate230.data.length; i++){
+		if(storedAbsentLate230.data[i].absent != undefined && storedAbsentLate230.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(eightSchedNew.time);
-		text2 = document.createTextNode(eightSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate230.time);
+		text2 = document.createTextNode(storedAbsentLate230.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -386,10 +386,10 @@ function summary(){
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(eightSchedNew.time);
-		text2 = document.createTextNode(eightSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate230.time);
+		text2 = document.createTextNode(storedAbsentLate230.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(eightSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate230.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -403,16 +403,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < ninthSchedNew.data.length; i++){
-		if(ninthSchedNew.data[i].absent != undefined && ninthSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate330.data.length; i++){
+		if(storedAbsentLate330.data[i].absent != undefined && storedAbsentLate330.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(ninthSchedNew.time);
-		text2 = document.createTextNode(ninthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate330.time);
+		text2 = document.createTextNode(storedAbsentLate330.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -425,17 +425,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (ninthSchedNew.data[i].absent == undefined && ninthSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate330.data[i].absent == undefined && storedAbsentLate330.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(ninthSchedNew.time);
-		text2 = document.createTextNode(ninthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate330.time);
+		text2 = document.createTextNode(storedAbsentLate330.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(ninthSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate330.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -449,16 +449,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < tenthSchedNew.data.length; i++){
-		if(tenthSchedNew.data[i].absent != undefined && tenthSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate430.data.length; i++){
+		if(storedAbsentLate430.data[i].absent != undefined && storedAbsentLate430.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(tenthSchedNew.time);
-		text2 = document.createTextNode(tenthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate430.time);
+		text2 = document.createTextNode(storedAbsentLate430.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -471,17 +471,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (tenthSchedNew.data[i].absent == undefined && tenthSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate430.data[i].absent == undefined && storedAbsentLate430.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(tenthSchedNew.time);
-		text2 = document.createTextNode(tenthSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate430.time);
+		text2 = document.createTextNode(storedAbsentLate430.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(tenthSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate430.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
@@ -495,16 +495,16 @@ function summary(){
 		}
 	 	}
 	 	
-	 	for(var i = 0; i < eleventhSchedNew.data.length; i++){
-		if(eleventhSchedNew.data[i].absent != undefined && eleventhSchedNew.data[i].late == undefined){
+	 	for(var i = 0; i < storedAbsentLate530.data.length; i++){
+		if(storedAbsentLate530.data[i].absent != undefined && storedAbsentLate530.data[i].late == undefined){
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");		
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 		
-		text1 = document.createTextNode(eleventhSchedNew.time);
-		text2 = document.createTextNode(eleventhSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate530.time);
+		text2 = document.createTextNode(storedAbsentLate530.data[i].name);
 		text3 = document.createTextNode("absent");
 		text4 = document.createTextNode("----------");
 
@@ -517,17 +517,17 @@ function summary(){
 		tr.appendChild(td3);
 		tr.appendChild(td4);
 		table.appendChild(tr);			
-		}else if (eleventhSchedNew.data[i].absent == undefined && eleventhSchedNew.data[i].late != undefined) {
+		}else if (storedAbsentLate530.data[i].absent == undefined && storedAbsentLate530.data[i].late != undefined) {
 		tr=document.createElement("tr");
 		td1=document.createElement("td");
 		td2=document.createElement("td");
 		td3=document.createElement("td");		
 		td4=document.createElement("td");		
 
-		text1 = document.createTextNode(eleventhSchedNew.time);
-		text2 = document.createTextNode(eleventhSchedNew.data[i].name);
+		text1 = document.createTextNode(storedAbsentLate530.time);
+		text2 = document.createTextNode(storedAbsentLate530.data[i].name);
 		text3 = document.createTextNode("------");
-		text4 = document.createTextNode(eleventhSchedNew.data[i].late+" minutes");
+		text4 = document.createTextNode(storedAbsentLate530.data[i].late+" minutes");
 
 		td1.appendChild(text1);
 		td2.appendChild(text2);
