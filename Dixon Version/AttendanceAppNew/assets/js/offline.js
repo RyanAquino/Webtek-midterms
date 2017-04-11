@@ -294,7 +294,15 @@ function startUI() {
 function retrieveReport() {
 	 //document.body.innerHTML = "<button class=bckbtn onclick=startUI()> Back </button>";
 	document.body.innerHTML ="<h1> Report of the Day</h1>" + "<br> <h2> Select instructors to view summarized reports. </h2>" ;
-
+	var backbutton = document.createElement("button");//--------------------------------------------------------------- BACK BUTTON AF
+	var backbuttonInstr = document.createElement("button");
+	backbutton.setAttribute("class","bckbtn");
+	backbuttonInstr.setAttribute("class","bckbtn");
+	backbutton.setAttribute("id" , "bckbtn11");
+	backbutton.setAttribute("onclick","startUI()");
+	backbuttonInstr.setAttribute("onclick","retrieveReport()");
+	backbutton.innerHTML = "Back";
+	backbuttonInstr.innerHTML = "Back";
 	var instructors= [
 			 					"Ali Mangaliag",
 								"Bench Bacani",
@@ -331,13 +339,7 @@ function retrieveReport() {
 				li.appendChild(liText);
 				ul.appendChild(li);
 			}//end loop
-			document.body.appendChild(ul); //--------------------------------------------------------------- BACK BUTTON AF
-			var backbutton = document.createElement("button");
-			backbutton.setAttribute("class","bckbtn");
-			backbutton.setAttribute("id" , "bckbtn11");
-			backbutton.setAttribute("onclick","startUI()");
-			document.body.appendChild(backbutton);
-			backbutton.innerHTML = "Back";
+			document.body.appendChild(ul);
 			//onclick
 			var recordsArray = document.getElementsByClassName("records");
 			for(var z = 0; z<recordsArray.length; z++){
@@ -380,17 +382,11 @@ function retrieveReport() {
 				}
 
 				document.body.innerHTML = "<h1> Records for "+name+" </h1>"; //append list after this para di ma ovewrite
+				document.body.appendChild(backbuttonInstr);
 				document.body.appendChild(ul);
 				document.body.appendChild(ptotal1);
 				document.body.appendChild(ptotal2);
 
-				document.body.appendChild(ul); //--------------------------------------------------------------- BACK BUTTON AF
-				var backbutton = document.createElement("button");
-				backbutton.setAttribute("class","bckbtn");
-				backbutton.setAttribute("id" , "bckbtn11");
-				backbutton.setAttribute("onclick","retrieveReport()");
-				document.body.appendChild(backbutton);
-				backbutton.innerHTML = "Back";				
 				} // end on click
 			} // end for loop
 
