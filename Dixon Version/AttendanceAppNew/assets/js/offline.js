@@ -293,7 +293,7 @@ function startUI() {
 
 function retrieveReport() {
 	 //document.body.innerHTML = "<button class=bckbtn onclick=startUI()> Back </button>";
-	document.body.innerHTML ="<h1> Report of the Day</h1>" + "<br> <h2> Select instructors to view summarized reports. </h2>" ;
+	document.body.innerHTML ="<h1> Report of the Day</h1>" + "<p class=alignCenter id=info> Select instructors to view summarized reports. </p>" ;
 
 	var backbutton = document.createElement("button");//--------------------------------------------------------------- BACK BUTTON AF
 	var backbuttonInstr = document.createElement("button");
