@@ -81,6 +81,7 @@ if(localStorage.getItem("saveChecker530")!="false"){
 		var presentText = document.createTextNode('All Present');
 		presentBtn.appendChild(presentText);
 		presentBtn.setAttribute("id", "allpresent530");
+		presentBtn.setAttribute("class", "allpresent");
 		document.body.appendChild(table);
 		document.body.appendChild(presentBtn); 
 
