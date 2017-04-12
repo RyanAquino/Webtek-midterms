@@ -210,3 +210,10 @@ li {
 .close:hover {
     background: #B20808;
 }
+
+.noSched{
+	text-align:center;
+	font-size:50px;
+	font-family:plusSvn;
+	color: white;
+}
