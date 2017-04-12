@@ -515,6 +515,7 @@
 			}
 			}
 		}
+		//modal
 		var div = document.createElement("div");
         div.setAttribute("id","openModal");
         div.setAttribute("class", "modalDialog");

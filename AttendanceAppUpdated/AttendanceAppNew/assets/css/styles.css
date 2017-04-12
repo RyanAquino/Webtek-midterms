@@ -88,7 +88,7 @@ li {
     justify-content: center;
     margin-bottom: 25px;
 }
-.centerBtns button{
+.centerBtns button, #summarbtn{
 	background:linear-gradient(to bottom, #0CC236 5%, #087A22 100%);
     border: none;
     color: white;
@@ -103,7 +103,7 @@ li {
     transition-duration: 0.4s;
     cursor: pointer;
 }
- .centerBtns button:hover {
+ .centerBtns button:hover, #summarbtn:hover {
     transform: scale(1.05);
     background:linear-gradient(to bottom, #12B030 5%, #075115 100%);
     border-radius: 5px;
@@ -114,7 +114,7 @@ li {
 
 }
 
-.centerBtns button:focus {
+.centerBtns button:focus #summarbtn:focus {
  outline: none;
 
 }
