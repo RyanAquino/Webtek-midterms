@@ -264,7 +264,7 @@ function startUI() {
 	  	//summary BUTTON=====================================
 	  	var summarybutton = document.createElement("button");
   		summarybutton.setAttribute("id", "summarbtn");
-  		summarybutton.setAttribute("onclick","summary()");	
+  		summarybutton.setAttribute("onclick","summaryGalo()");	
   		summtext = document.createTextNode("Summary");
   		summarybutton.appendChild(summtext);
   		document.body.appendChild(summarybutton);
