@@ -10,6 +10,7 @@
 h2{
 	font-size: 2.5em;
     margin: 0 auto;
+    text-shadow: 1px 0px 16px rgba(0, 0, 0, 1);  
 }
 body{
 	background: url("../img/employee.jpg");
@@ -70,6 +71,7 @@ h1{
 	text-align: center;
 	font-family: plusSvn;
 	color: #F8F8FF;
+    text-shadow: 1px 0px 16px rgba(0, 0, 0, 1);  
 }
 .heading{
     font-family: plusSvn;
