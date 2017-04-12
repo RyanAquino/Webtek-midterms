@@ -262,8 +262,9 @@ function startUI() {
 	  	retrievebtn.appendChild(retrievetxt);
 	  	
 	  	//summary BUTTON=====================================
-	  	var summarybutton = document.createElement("button");
+	  	var summarybutton = document.createElement("a");
   		summarybutton.setAttribute("id", "summarbtn");
+  		summarybutton.setAttribute("href","#openModal");
   		summarybutton.setAttribute("onclick","summaryGalo()");	
   		summtext = document.createTextNode("Summary");
   		summarybutton.appendChild(summtext);

@@ -515,6 +515,21 @@
 			}
 			}
 		}
-		document.body.appendChild(table); //try
+		var div = document.createElement("div");
+        div.setAttribute("id","openModal");
+        div.setAttribute("class", "modalDialog");
+        var div2 = document.createElement("div");
+        var a = document.createElement("a");
+        a.setAttribute("href","#close");
+        a.setAttribute("title", "Close");
+        a.setAttribute("class","close");
+        var close = document.createTextNode("x");
+        a.appendChild(close);
+        div2.appendChild(a);
+        div2.appendChild(table);
+        div.appendChild(div2);
+        document.body.appendChild(div);
+
+
 }		
 		
