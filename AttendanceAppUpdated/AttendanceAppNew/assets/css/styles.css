@@ -33,27 +33,28 @@ body{
     text-align: center;}
 
 .sched {
-	text-align: center;
+    border: 3px outset #191E4C;
+    text-align: center;
     font-family: digiclock;
-	font-size: xx-large;
-	border-radius: 25px;
+    font-size: xx-large;
+    border-radius: 25px;
     background:linear-gradient(to bottom, #3177E7 5%, #0345AF 100%);
-	margin: 0 auto;
+    margin: 0 auto;
     margin-bottom: 5px;
-    padding: 15px 40px 15px 40px;
+    padding: 10px 40px 15px 40px;
     width: 500px;
     height: 55px; 
     color:  #F8F8FF;
     box-shadow: 7px 7px 39px 1px rgba(0,0,0,1);
-	max-width: 90%;
+    max-width: 90%;
     transition: all .3s ease-in-out; 
     transition-delay: .0.02s
 }
 .sched:hover{
-    background:linear-gradient(to bottom, #4162DC 5%, #202DD5 100%);
-	transform: scale(1.1);
-    text-shadow: 1px 0px 20px #191E4C;
-	cursor: pointer;
+    background:linear-gradient(to bottom, #62CCDB 5%, #076EA9 100%);
+    transform: scale(1.1);
+    text-shadow: 1px 0px 16px rgba(0, 0, 0, 1);
+    cursor: pointer;
     font-size: 30px;
     
 }
