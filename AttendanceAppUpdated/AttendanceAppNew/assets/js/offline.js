@@ -65,7 +65,7 @@ function startUI() {
 		var ptxt = document.createTextNode("Sorry, You haven't downloaded the schedules yet!"); 
 		var divInitial = document.createElement("div");
 		p.appendChild(ptxt);
-		p.setAttribute("style", "background-color: white;"); //TEMPORARY LANG TO
+		p.setAttribute("class", "noSched"); //No sched message.
 		document.body.appendChild(p);
 		//download sched to server BUTTON
 	  	var retrievebtn = document.createElement("button");
