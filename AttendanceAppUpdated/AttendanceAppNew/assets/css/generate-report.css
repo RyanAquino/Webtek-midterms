@@ -21,6 +21,7 @@
     content: "";
     counter-increment: li;
     border-radius: 50%;
+    border: 2px outset #2A9E0B;
     position: absolute; 
     left: -2.5em;
     top: 50%;
