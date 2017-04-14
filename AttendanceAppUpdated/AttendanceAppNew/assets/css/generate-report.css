@@ -16,6 +16,7 @@
 .records:hover{
     background: linear-gradient(to bottom, #4FEB25 5%, #2A9E0B 100%);
     color: black;
+    cursor: pointer;
 }   
 
 .records:before{
