@@ -432,8 +432,20 @@ function retrieveReport() {
 			console.log("not ok sa status");
 		}
 	}catch (error){
-		console.log(error);
-		alert("Error Connecting to server");
+		var div = document.createElement("div");
+		div.setAttribute("class", "alert");
+		var span = document.createElement("span");
+		span.setAttribute("class", "closebtn");
+		span.setAttribute("onclick", "this.parentElement.style.display='none';");
+		var spanTxt = document.createTextNode("CLOSE")
+		span.appendChild(spanTxt);
+		var pTxt = document.createTextNode("Error Connecting to Server!");
+		var p = document.createElement("p");
+		p.appendChild(pTxt);
+		p.setAttribute("class", "alertContent");
+		div.appendChild(span);
+		div.appendChild(p);
+		document.body.appendChild(div);
 	}
 
 } //end retrieve
@@ -449,7 +461,20 @@ function sync(){
 			localStorage.getItem("absentLate330") == null || localStorage.getItem("absentLate430") == null ||
 			localStorage.getItem("absentLate530") == null ){
 
-			alert("ERROR SYNCING\n One or more schedule has not been saved yet!");
+				var div = document.createElement("div");
+				div.setAttribute("class", "alert");
+				var span = document.createElement("span");
+				span.setAttribute("class", "closebtn");
+				span.setAttribute("onclick", "this.parentElement.style.display='none';");
+				var spanTxt = document.createTextNode("CLOSE")
+				span.appendChild(spanTxt);
+				var pTxt = document.createTextNode("Error Syncing to Server! One or more Schedules have not been saved yet");
+				var p = document.createElement("p");
+				p.appendChild(pTxt);
+				p.setAttribute("class", "alertContent");
+				div.appendChild(span);
+				div.appendChild(p);
+				document.body.appendChild(div);
 		}else{
 			try{
 				var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
@@ -522,7 +547,20 @@ function sync(){
 				localStorage.removeItem("absentLate530");
 				alert("Succcess!");
 			}catch (error){
-				alert("Error, Connection Failed");
+				var div = document.createElement("div");
+				div.setAttribute("class", "alert");
+				var span = document.createElement("span");
+				span.setAttribute("class", "closebtn");
+				span.setAttribute("onclick", "this.parentElement.style.display='none';");
+				var spanTxt = document.createTextNode("CLOSE")
+				span.appendChild(spanTxt);
+				var pTxt = document.createTextNode("Error Connecting to Server!");
+				var p = document.createElement("p");
+				p.appendChild(pTxt);
+				p.setAttribute("class", "alertContent");
+				div.appendChild(span);
+				div.appendChild(p);
+				document.body.appendChild(div);
 			}
 				
 		}
