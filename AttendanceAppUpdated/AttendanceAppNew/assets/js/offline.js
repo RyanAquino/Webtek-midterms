@@ -427,9 +427,39 @@ function sync(){
 				xmlhttp.open("POST", "json-handler.json");
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate730")); //stored 730-530
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate830"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate930"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate1030"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate1130"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate1230"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate130"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate230"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate330"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate430"));
+				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.setRequestHeader("Content-Type", "application/json");
+				xmlhttp.send(localStorage.getItem("absentLate530"));
 				console.log("ok");
 			}catch (error){
-				console.log("ok");
+				alert("Error, Connection Failed");
 			}
 				
 		}
