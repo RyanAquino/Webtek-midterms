@@ -223,9 +223,9 @@ if(localStorage.getItem("saveChecker730")!="false"){
 							firstSchedNew.data.push(storedFirstSched.data[0]);
 							firstSchedNew.data[firstSchedNew.data.length-1]["absent"] = 1;
 							firstSchedNew.data[firstSchedNew.data.length-1]["date"] = today;
-							document.getElementById("absent"+0).setAttribute("disabled", "");
-							document.getElementById("late"+0).setAttribute("disabled", "");
-							document.getElementById("latebtn"+0).setAttribute("disabled", "");
+							document.getElementById("absent"+2).setAttribute("disabled", "");
+							document.getElementById("late"+2).setAttribute("disabled", "");
+							document.getElementById("latebtn"+2).setAttribute("disabled", "");
 							document.getElementById("allpresent730").setAttribute("disabled", "");
 						}
 						
@@ -709,6 +709,14 @@ function eight(){
 						if(y){
 							secondSchedNew.data.push(storedSecondSched.data[4]);
 							secondSchedNew.data[secondSchedNew.data.length-1]["substitute"] = true;
+							secondSchedNew.data[secondSchedNew.data.length-1]["absent"] = 1; //problem di masave
+							secondSchedNew.data[secondSchedNew.data.length-1]["date"] = today;
+							document.getElementById("absent"+4).setAttribute("disabled", "");
+							document.getElementById("late"+4).setAttribute("disabled", "");
+							document.getElementById("latebtn"+4).setAttribute("disabled", "");
+							document.getElementById("allpresent830").setAttribute("disabled", "");
+						}else{
+							secondSchedNew.data.push(storedSecondSched.data[3]);
 							secondSchedNew.data[secondSchedNew.data.length-1]["absent"] = 1; //problem di masave
 							secondSchedNew.data[secondSchedNew.data.length-1]["date"] = today;
 							document.getElementById("absent"+4).setAttribute("disabled", "");

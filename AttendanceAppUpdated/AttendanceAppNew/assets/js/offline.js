@@ -508,7 +508,7 @@ function sync(){
 				localStorage.removeItem("absentLate330");
 				localStorage.removeItem("absentLate430");
 				localStorage.removeItem("absentLate530");
-				console.log("ok");
+				alert("Succcess!");
 			}catch (error){
 				alert("Error, Connection Failed");
 			}
