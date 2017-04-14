@@ -183,7 +183,6 @@ if(localStorage.getItem("saveChecker730")!="false"){
 				document.getElementById("latebtn"+1).onclick = function() {
 					var x = confirm("Are you Sure?");
 					if(x == true){ //store na sa bagong array tapos disable yung button
-						var y = confirm("With Substitute?");
 						var lateValue = document.getElementById('late'+1).value;
 						firstSchedNew.data.push(storedFirstSched.data[1]);
 						firstSchedNew.data[firstSchedNew.data.length-1]["late"] = lateValue;
@@ -387,7 +386,20 @@ if(localStorage.getItem("saveChecker730")!="false"){
 				startUI();
 			}
 	}else{
-		alert("You Already Checked that schedule!");
+		var div = document.createElement("div");
+		div.setAttribute("class", "alert");
+		var span = document.createElement("span");
+		span.setAttribute("class", "closebtn");
+		span.setAttribute("onclick", "this.parentElement.style.display='none';");
+		var spanTxt = document.createTextNode("__")
+		span.appendChild(spanTxt);
+		var pTxt = document.createTextNode("You already checked that schedule!");
+		var p = document.createElement("p");
+		p.appendChild(pTxt);
+		p.setAttribute("class", "alertContent");
+		div.appendChild(span);
+		div.appendChild(p);
+		document.body.appendChild(div);
 	}		
 	
 }//end seven
@@ -775,7 +787,20 @@ function eight(){
 				startUI();
 			}
 	}else{
-		alert("You Already Checked that schedule!");
+		var div = document.createElement("div");
+		div.setAttribute("class", "alert");
+		var span = document.createElement("span");
+		span.setAttribute("class", "closebtn");
+		span.setAttribute("onclick", "this.parentElement.style.display='none';");
+		var spanTxt = document.createTextNode("__")
+		span.appendChild(spanTxt);
+		var pTxt = document.createTextNode("You already checked that schedule!");
+		var p = document.createElement("p");
+		p.appendChild(pTxt);
+		p.setAttribute("class", "alertContent");
+		div.appendChild(span);
+		div.appendChild(p);
+		document.body.appendChild(div);
 	}	
 }//end eight
 

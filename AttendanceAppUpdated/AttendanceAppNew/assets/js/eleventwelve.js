@@ -385,7 +385,20 @@ if(localStorage.getItem("saveChecker1130")!="false"){
 				startUI();
 			}
 	}else{
-		alert("You Already Checked that schedule!");
+		var div = document.createElement("div");
+		div.setAttribute("class", "alert");
+		var span = document.createElement("span");
+		span.setAttribute("class", "closebtn");
+		span.setAttribute("onclick", "this.parentElement.style.display='none';");
+		var spanTxt = document.createTextNode("__")
+		span.appendChild(spanTxt);
+		var pTxt = document.createTextNode("You already checked that schedule!");
+		var p = document.createElement("p");
+		p.appendChild(pTxt);
+		p.setAttribute("class", "alertContent");
+		div.appendChild(span);
+		div.appendChild(p);
+		document.body.appendChild(div);
 	}		
 	
 }//1130
@@ -781,7 +794,20 @@ if(localStorage.getItem("saveChecker1230")!="false"){
 				startUI();
 			}
 	}else{
-		alert("You Already Checked that schedule!");
+		var div = document.createElement("div");
+		div.setAttribute("class", "alert");
+		var span = document.createElement("span");
+		span.setAttribute("class", "closebtn");
+		span.setAttribute("onclick", "this.parentElement.style.display='none';");
+		var spanTxt = document.createTextNode("__")
+		span.appendChild(spanTxt);
+		var pTxt = document.createTextNode("You already checked that schedule!");
+		var p = document.createElement("p");
+		p.appendChild(pTxt);
+		p.setAttribute("class", "alertContent");
+		div.appendChild(span);
+		div.appendChild(p);
+		document.body.appendChild(div);
 	}		
 	
 }
