@@ -371,6 +371,8 @@ function retrieveReport() {
 				var totalLate = 0;
 				var katawan = document.getElementsByTagName("body");
 				var ul = document.createElement("ul");
+				var ptotal1 = document.createElement("p");
+				var ptotal2 = document.createElement("p");
 				for(var i = 0; i<records.details.length; i++){
 					for(var j = 0; j<records.details[i].data.length; j++){
 						if(records.details[i].data[j].name==this.innerHTML){

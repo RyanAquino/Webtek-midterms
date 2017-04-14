@@ -87,7 +87,6 @@
 			"data":[{"name":"Maria Concepcion Clemente", "absent":1, "date":"4/10/2017"},
 					{"name":"Lambert Famorca", "absent":1, "date":"4/10/2017"},
 					{"name":"Laurence Balmeo", "absent":1,"substitute":true, "date":"4/10/2017"}
-
 					]
 		},
 
@@ -112,7 +111,6 @@
 		{
 			"time":"100-200",
 			"data":[{"name":"Cess Mercado", "late":2, "date":"4/26/2017"},
-					{"name":"Vicoy Ferrer", "late":2, "date":"4/26/2017"},
 					{"name":"Laurence Balmeo", "absent":1, "date":"4/26/2017"},
 					{"name":"Randy Domantay", "absent":1, "substitute":true, "date":"4/26/2017"}
 
