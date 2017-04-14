@@ -1,8 +1,6 @@
 CACHE MANIFEST
 CACHE:
 index.html
-dummyfile.json
-json-handler.json
 assets/css/modal.css
 assets/css/generate-report.css
 assets/css/generate-report-mob.css

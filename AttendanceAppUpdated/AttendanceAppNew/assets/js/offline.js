@@ -294,8 +294,14 @@ function startUI() {
 
 
 function retrieveReport() {
-	 //document.body.innerHTML = "<button class=bckbtn onclick=startUI()> Back </button>";
-	document.body.innerHTML ="<h1> Report of the Day</h1>" + "<p class=alignCenter id=info> Select instructors to view summarized reports. </p>" ;
+	
+	try{
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", "dummyfile.json", false); //bagong file dummy na nakalagy mga absent at late.\
+		// xmlhttp.open("GET", "dummyfileNull.json", true); eto yung walang laman pag walang absent at late. 
+		xmlhttp.send(); 
+		 //document.body.innerHTML = "<button class=bckbtn onclick=startUI()> Back </button>";
+	document.body.innerHTML ="<h1> Attendance Report</h1>" + "<p class=alignCenter id=info> Select instructors to view summarized reports. </p>" ;
 
 	var backbutton = document.createElement("button");//--------------------------------------------------------------- BACK BUTTON AF
 	var backbuttonInstr = document.createElement("button");
@@ -326,11 +332,7 @@ function retrieveReport() {
 								"Randy Domantay",
 								"Vicoy Ferrer"
 								];
-	try{
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET", "dummyfile.json", false); //bagong file dummy na nakalagy mga absent at late.\
-		// xmlhttp.open("GET", "dummyfileNull.json", true); eto yung walang laman pag walang absent at late. 
-		xmlhttp.send(); 
+		
 		if (xmlhttp.status == 200 || xmlhttp.status == 304) {
 			var records = JSON.parse(xmlhttp.responseText);
 			//html
@@ -362,16 +364,30 @@ function retrieveReport() {
 						if(records.details[i].data[j].name==this.innerHTML){
 							var name = records.details[i].data[j].name;
 							if(records.details[i].data[j].hasOwnProperty("absent")){ // pag absent lang naka lagay
-								var absent = records.details[i].data[j].absent;
-								var x = document.createElement("li");
-								var xText = document.createTextNode("Absent "+records.details[i].time+ " "+records.details[i].data[j].date);
-								x.appendChild(xText);
-								ul.appendChild(x);
-								totalAbsent+=absent; 
-								var ptotal1 = document.createElement("p");
-								ptotal1.setAttribute("class", "recordTotal"); //-------------------------------------------------------------------
-								var ptext1 = document.createTextNode("Total Absents: "+totalAbsent);
-								ptotal1.appendChild(ptext1);
+								if(records.details[i].data[j].hasOwnProperty("substitute")){
+									var absent = records.details[i].data[j].absent;
+									var x = document.createElement("li");
+									var xText = document.createTextNode("Absent "+records.details[i].time+ " Last "+records.details[i].data[j].date+" With Substitute");
+									x.appendChild(xText);
+									ul.appendChild(x);
+									totalAbsent+=absent; 
+									var ptotal1 = document.createElement("p");
+									ptotal1.setAttribute("class", "recordTotal"); //-------------------------------------------------------------------
+									var ptext1 = document.createTextNode("Total Absents: "+totalAbsent);
+									ptotal1.appendChild(ptext1);
+								}else{
+									var absent = records.details[i].data[j].absent;
+									var x = document.createElement("li");
+									var xText = document.createTextNode("Absent "+records.details[i].time+ " "+records.details[i].data[j].date);
+									x.appendChild(xText);
+									ul.appendChild(x);
+									totalAbsent+=absent; 
+									var ptotal1 = document.createElement("p");
+									ptotal1.setAttribute("class", "recordTotal"); //-------------------------------------------------------------------
+									var ptext1 = document.createTextNode("Total Absents: "+totalAbsent);
+									ptotal1.appendChild(ptext1);
+								}
+								
 								
 							}else if(records.details[i].data[j].hasOwnProperty("late")){ // pag late lang anka lagay
 								var late = records.details[i].data[j].late;
@@ -405,6 +421,7 @@ function retrieveReport() {
 		}
 	}catch (error){
 		console.log(error);
+		alert("Error Connecting to server");
 	}
 
 } //end retrieve
@@ -424,39 +441,73 @@ function sync(){
 		}else{
 			try{
 				var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate730")); //stored 730-530
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate830"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate930"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate1030"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate1130"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate1230"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate130"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate230"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate330"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate430"));
-				xmlhttp.open("POST", "json-handler.json");
+				xmlhttp.open("POST", "json-handler.json", false);
 				xmlhttp.setRequestHeader("Content-Type", "application/json");
 				xmlhttp.send(localStorage.getItem("absentLate530"));
+				
+				localStorage.setItem("saveChecker730", "true");
+				localStorage.setItem("saveChecker830", "true");
+				localStorage.setItem("saveChecker930", "true");
+				localStorage.setItem("saveChecker1030", "true");
+				localStorage.setItem("saveChecker1130", "true");
+				localStorage.setItem("saveChecker1230", "true");
+				localStorage.setItem("saveChecker130", "true");
+				localStorage.setItem("saveChecker230", "true");
+				localStorage.setItem("saveChecker330", "true");
+				localStorage.setItem("saveChecker430", "true");
+				localStorage.setItem("saveChecker530", "true");
+				firstSchedNew.data.length = 0;
+				secondSchedNew.data.length = 0;
+				thirdSchedNew.data.length = 0;
+				fourthSchedNew.data.length = 0;
+				fifthSchedNew.data.length = 0;
+				sixthSchedNew.data.length = 0;
+				seventhSchedNew.data.length = 0;
+				eightSchedNew.data.length = 0;
+				ninthSchedNew.data.length = 0;	
+				tenthSchedNew.data.length = 0;
+				eleventhSchedNew.data.length = 0;
+				localStorage.removeItem("absentLate730");
+				localStorage.removeItem("absentLate830");
+				localStorage.removeItem("absentLate930");
+				localStorage.removeItem("absentLate1030");
+				localStorage.removeItem("absentLate1130");
+				localStorage.removeItem("absentLate1230");
+				localStorage.removeItem("absentLate130");
+				localStorage.removeItem("absentLate230");
+				localStorage.removeItem("absentLate330");
+				localStorage.removeItem("absentLate430");
+				localStorage.removeItem("absentLate530");
 				console.log("ok");
 			}catch (error){
 				alert("Error, Connection Failed");

@@ -86,7 +86,7 @@
 			"time":"1130-1230",
 			"data":[{"name":"Maria Concepcion Clemente", "absent":1, "date":"4/10/2017"},
 					{"name":"Lambert Famorca", "absent":1, "date":"4/10/2017"},
-					{"name":"Laurence Balmeo", "absent":1,"substitute":true, "date":"4/10/2017"},
+					{"name":"Laurence Balmeo", "absent":1,"substitute":true, "date":"4/10/2017"}
 
 					]
 		},
