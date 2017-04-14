@@ -155,7 +155,7 @@ function startUI() {
 		var span = document.createElement("span");
 		span.setAttribute("class", "closebtn");
 		span.setAttribute("onclick", "this.parentElement.style.display='none';");
-		var spanTxt = document.createTextNode("CLOSE")
+		var spanTxt = document.createTextNode("__")
 		span.appendChild(spanTxt);
 		var pTxt = document.createTextNode("Error Connecting to Server!");
 		var p = document.createElement("p");
@@ -439,7 +439,7 @@ function retrieveReport() {
 		var span = document.createElement("span");
 		span.setAttribute("class", "closebtn");
 		span.setAttribute("onclick", "this.parentElement.style.display='none';");
-		var spanTxt = document.createTextNode("CLOSE")
+		var spanTxt = document.createTextNode("__")
 		span.appendChild(spanTxt);
 		var pTxt = document.createTextNode("Error Connecting to Server!");
 		var p = document.createElement("p");
@@ -468,7 +468,7 @@ function sync(){
 				var span = document.createElement("span");
 				span.setAttribute("class", "closebtn");
 				span.setAttribute("onclick", "this.parentElement.style.display='none';");
-				var spanTxt = document.createTextNode("CLOSE")
+				var spanTxt = document.createTextNode("__")
 				span.appendChild(spanTxt);
 				var pTxt = document.createTextNode("Error Syncing to Server! One or more Schedules have not been saved yet");
 				var p = document.createElement("p");
@@ -554,7 +554,7 @@ function sync(){
 				var span = document.createElement("span");
 				span.setAttribute("class", "closebtn");
 				span.setAttribute("onclick", "this.parentElement.style.display='none';");
-				var spanTxt = document.createTextNode("CLOSE")
+				var spanTxt = document.createTextNode("__")
 				span.appendChild(spanTxt);
 				var pTxt = document.createTextNode("Error Connecting to Server!");
 				var p = document.createElement("p");
