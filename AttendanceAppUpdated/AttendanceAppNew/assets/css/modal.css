@@ -51,3 +51,41 @@
 .close:hover {
     background: #B20808;
 }
+/* The alert message box */
+.alert {
+    width: 25%;
+    margin-top: 20px;
+    height: 30%;
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background: rgba(255,0,0,0.3);
+}
+.alertContent{
+    font-size: 1.5em;
+    font-family: Arial;
+    margin-top: 16%;
+}
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: green;
+}

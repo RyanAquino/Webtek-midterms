@@ -150,8 +150,20 @@ function startUI() {
 		localStorage.setItem("530", JSON.stringify(eleventhSchedtxt));
 		startUI();
 	}catch(error){
-		console.log(error);
-		alert("Error connecting to server!");
+		var div = document.createElement("div");
+		div.setAttribute("class", "alert");
+		var span = document.createElement("span");
+		span.setAttribute("class", "closebtn");
+		span.setAttribute("onclick", "this.parentElement.style.display='none';");
+		var spanTxt = document.createTextNode("CLOSE")
+		span.appendChild(spanTxt);
+		var pTxt = document.createTextNode("Error Connecting to Server!");
+		var p = document.createElement("p");
+		p.appendChild(pTxt);
+		p.setAttribute("class", "alertContent");
+		div.appendChild(span);
+		div.appendChild(p);
+		document.body.appendChild(div);
 	}
 	//=========================END DOWNLOAD ==================================
 	};//end on click
