@@ -420,13 +420,76 @@ function retrieveReport() {
 						}//end If for Ali
 					}
 				}
+					
+				if(totalLate != 0 || totalAbsent != 0){
+				var modalDiv1 = document.createElement("div");
+				modalDiv1.setAttribute("id","myModal");
+				modalDiv1.setAttribute("class","modal1");
+		
+				var modalDiv2 = document.createElement("div");
+				modalDiv2.setAttribute("class","modal2");
+			
+			// content=====================================
 
-				document.body.innerHTML = "<h1> Records for "+name+" </h1>"; //append list after this para di ma ovewrite
-				document.body.appendChild(backbuttonInstr);
-				document.body.appendChild(ul);
-				document.body.appendChild(ptotal1);
-				document.body.appendChild(ptotal2);
+				var modalSpan =document.createElement("span");
+				modalSpan.setAttribute("class","close");
+				modalSpan.setAttribute("onclick", "retrieveReport()");
+				modalSpan.innerHTML="&times;";
 
+				var modalDiv3 = document.createElement("div");
+				modalDiv3.setAttribute("class","modal-body1");
+
+				var modalH1 = document.createElement("h1");
+				var modalNames = document.createTextNode("Records for "+name);
+				modalH1.appendChild(modalNames);
+				modalDiv3.appendChild(modalH1);
+				
+				var modalDiv4 = document.createElement("div");
+				modalDiv4.setAttribute("class","modal-body2");
+				modalDiv4.appendChild(ul);
+				modalDiv4.appendChild(ptotal1);
+				modalDiv4.appendChild(ptotal2);
+
+				modalDiv3.appendChild(modalSpan);
+
+				modalDiv2.appendChild(modalDiv3);
+				modalDiv2.appendChild(modalDiv4);
+				modalDiv1.appendChild(modalDiv2);
+
+
+				document.body.appendChild(modalDiv1);
+			}else{
+				var noModalDiv1 = document.createElement("div");
+				noModalDiv1.setAttribute("id","myModal");
+				noModalDiv1.setAttribute("class","modal1");
+		
+				var noModalDiv2 = document.createElement("div");
+				noModalDiv2.setAttribute("class","modal2");
+			
+			// content=====================================
+
+				var noModalSpan =document.createElement("span");
+				noModalSpan.setAttribute("class","close");
+				noModalSpan.setAttribute("onclick", "retrieveReport()");
+				noModalSpan.innerHTML="&times;";
+
+				var noModalDiv3 = document.createElement("div");
+				noModalDiv3.setAttribute("class","modal-body1");
+
+				var noModalH1 = document.createElement("h1");
+				var noModalNames = document.createTextNode("Sorry No Record Available for " + this.innerHTML);
+				noModalH1.appendChild(noModalNames);
+				noModalDiv3.appendChild(noModalH1);
+
+				var noModalDiv4 = document.createElement("div");
+				noModalDiv4.setAttribute("class","modal-body2");
+				noModalDiv3.appendChild(noModalSpan);
+
+				noModalDiv2.appendChild(noModalDiv3);
+				noModalDiv2.appendChild(noModalDiv4);
+				noModalDiv1.appendChild(noModalDiv2);
+
+				document.body.appendChild(noModalDiv1);
 				} // end on click
 			} // end for loop
 
