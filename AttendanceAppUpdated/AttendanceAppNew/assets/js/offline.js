@@ -490,6 +490,7 @@ function retrieveReport() {
 				noModalDiv1.appendChild(noModalDiv2);
 
 				document.body.appendChild(noModalDiv1);
+			}
 				} // end on click
 			} // end for loop
 
