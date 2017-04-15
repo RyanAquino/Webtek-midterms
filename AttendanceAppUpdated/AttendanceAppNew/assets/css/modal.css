@@ -89,3 +89,58 @@
 .closebtn:hover {
     color: blue;
 }
+
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+
+#tab-mod th:nth-child(3) {
+    display: block;
+    background:linear-gradient(to bottom, #F3493E 5%, #C31005 100%);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    padding-right:5px;
+    padding: 0px 5px 0px 5px;
+}
+
+#tab-mod th:nth-child(4){
+    display: inline-block;
+    background:linear-gradient(to bottom, #F79A3D 10%, #D16C07 100%);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    padding: 0px 40px 0px 40px;
+
+}
+
+#tab-mod tr{
+    margin-top: 20px;
+}
+
+#tab-mod td:nth-child(3){
+    font-size:15px;
+    background:linear-gradient(to bottom, #F3493E 5%, #C31005 100%);
+    padding: 2px 5px 2px 5px;
+    min-width: 55px;
+}
+
+#tab-mod td:nth-child(4){
+    font-size:15px;
+    background:linear-gradient(to bottom, #F79A3D 10%, #D16C07 100%);
+    padding: 2px 5px 2px 5px;
+    min-width:55px;
+}
+
+
+}
