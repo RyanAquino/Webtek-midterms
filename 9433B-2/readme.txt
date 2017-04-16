@@ -34,6 +34,9 @@ For windows users: it is located in c/windows/system32/drivers/etc/
 	'IP Address of the server'			www.group2.org
 
 3. Go to your web browser and type in www.group2.org.
+CREDENTIALS
+username: admin
+password: admin
 
 4. you can now access and use the web application. 
 
