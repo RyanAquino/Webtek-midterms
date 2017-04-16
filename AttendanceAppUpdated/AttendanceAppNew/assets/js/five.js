@@ -373,7 +373,7 @@ if(localStorage.getItem("saveChecker530")!="false"){
 
 
 			document.getElementById("savebtn").onclick = function(){
-				var y = confirm("Are you sure you want to save? You cannot undo is process");
+				var y = confirm("Are you sure you want to save? You cannot undo this process");
 				if(y == true){
 					  localStorage.setItem("absentLate530", JSON.stringify(eleventhSchedNew));
 					  storedAbsentLate530 = JSON.parse(localStorage.getItem("absentLate530"));

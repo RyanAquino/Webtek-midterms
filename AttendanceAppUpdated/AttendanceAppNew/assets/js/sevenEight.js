@@ -371,7 +371,7 @@ if(localStorage.getItem("saveChecker730")!="false"){
 
 
 			document.getElementById("savebtn").onclick = function(){
-				var y = confirm("Are you sure you want to save? You cannot undo is process");
+				var y = confirm("Are you sure you want to save? You cannot undo this process");
 				if(y == true){
 					  localStorage.setItem("absentLate730", JSON.stringify(firstSchedNew));
 					  storedAbsentLate730 = JSON.parse(localStorage.getItem("absentLate730"));
@@ -772,7 +772,7 @@ function eight(){
 
 
 			document.getElementById("savebtn").onclick = function(){
-				var y = confirm("Are you sure you want to save? You cannot undo is process");
+				var y = confirm("Are you sure you want to save? You cannot undo this process");
 				if(y == true){
 					 localStorage.setItem("absentLate830", JSON.stringify(secondSchedNew));
 					 storedAbsentLate830 = JSON.parse(localStorage.getItem("absentLate830"));
