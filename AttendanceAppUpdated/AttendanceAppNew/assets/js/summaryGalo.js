@@ -47,7 +47,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("----------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -63,7 +63,7 @@
 				var tdName = document.createTextNode(sevenStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("----------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(sevenStored.data[i].late+" minute/s");
@@ -91,7 +91,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("----------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -107,7 +107,7 @@
 				var tdName = document.createTextNode(eightStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("----------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(eightStored.data[i].late+" minute/s");
@@ -135,7 +135,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("----------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -151,7 +151,7 @@
 				var tdName = document.createTextNode(nineStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("----------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(nineStored.data[i].late+" minute/s");
