@@ -371,6 +371,15 @@ function retrieveReport() {
 				var totalLate = 0;
 				var katawan = document.getElementsByTagName("body");
 				var ul = document.createElement("ul");
+					
+				ul.setAttribute("class","personRecords");
+				var logsH1 = document.createElement("h1");
+				var logsText = document.createTextNode("Logs :");
+				logsH1.appendChild(logsText);
+				ul.appendChild(logsH1);
+				var line = document.createElement("hr");
+				ul.appendChild(line);
+					
 				var ptotal1 = document.createElement("p");
 				var ptotal2 = document.createElement("p");
 				for(var i = 0; i<records.details.length; i++){
