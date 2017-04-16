@@ -42,3 +42,18 @@ option_id	option_name		option_value
 by placing what you have placed on Step 5 (e.g. 10.10.x.x/wordpress).
 
 7. The School Website should open.
+
+
+===CONFIGURING THE WEB APPLICATION===
+
+1. In order to access the web application, first configure the host file.
+For windows users: it is located in c/windows/system32/drivers/etc/
+
+2. Edit the Host file and add the following line and save it.
+	'IP Address of the server'			www.group2.org
+
+3. Go to your web browser and type in www.group2.org.
+
+4. you can now access and use the web application. 
+
+5. Download the schedules to save the schedules in order for your device to access the application even when not connected to the inter
