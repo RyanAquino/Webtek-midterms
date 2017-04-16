@@ -122,7 +122,7 @@ only screen and (max-width: 760px),
     min-width: 60%;
 }
 
-#tab-mod th:nth-child(4){
+#tab-mod th:nth-child(3){
     display: block;
     background:linear-gradient(to bottom, #F3493E 5%, #C31005 100%);
 }
