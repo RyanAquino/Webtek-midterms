@@ -50,7 +50,7 @@ if(localStorage.getItem("saveChecker330")!="false"){
 			button2.setAttribute("id", "button2"+i);
 			input = document.createElement("input")
 			input.setAttribute("type", "number");
-			input.setAttribute("value","0");
+			input.setAttribute("value","1");
 			input.setAttribute("min","1");
 			input.setAttribute("max","15");
 			input.setAttribute("id", "late"+i); 
@@ -451,7 +451,7 @@ if(localStorage.getItem("saveChecker430")!="false"){
 			button2.setAttribute("id", "button2"+i);
 			input = document.createElement("input")
 			input.setAttribute("type", "number");
-			input.setAttribute("value","0");
+			input.setAttribute("value","1");
 			input.setAttribute("min","1");
 			input.setAttribute("max","15");
 			input.setAttribute("id", "late"+i); 
