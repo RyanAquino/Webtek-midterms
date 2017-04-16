@@ -1,3 +1,8 @@
+@font-face{
+    font-family: "FrancoisOne";
+    src: url("../fonts/FrancoisOne.ttf");
+}
+
 body{
 	margin:0;
 }
@@ -73,4 +78,15 @@ body{
     background-color: #5cb85c;
     color: white;
 }*/
+
+.personRecords li{
+	font-size: 30px;
+	font-family: Arial;
+}
+
+.recordTotal{
+	font-size: 40px;
+	font-family: FrancoisOne;
+}
+
 
