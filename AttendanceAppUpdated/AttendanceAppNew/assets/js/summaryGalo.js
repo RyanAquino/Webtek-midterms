@@ -21,6 +21,7 @@
 		var thtext2 = document.createTextNode("Name");
 		var thtext3 = document.createTextNode("Absent");
 		var thtext4 = document.createTextNode("Late");
+		table.setAttribute("id","tab-mod");
 		th1.appendChild(thtext1);
 		table.appendChild(th1);
 		th2.appendChild(thtext2);
@@ -65,7 +66,7 @@
 				var tdAbsent = document.createTextNode("----------");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode(sevenStored.data[i].late);
+				var tdLate = document.createTextNode(sevenStored.data[i].late+" minute/s");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -109,7 +110,7 @@
 				var tdAbsent = document.createTextNode("----------");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode(eightStored.data[i].late);
+				var tdLate = document.createTextNode(eightStored.data[i].late+" minute/s");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -153,7 +154,7 @@
 				var tdAbsent = document.createTextNode("----------");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode(nineStored.data[i].late);
+				var tdLate = document.createTextNode(nineStored.data[i].late+" minute/s");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -178,7 +179,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -194,7 +195,7 @@
 				var tdName = document.createTextNode(tenStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(tenStored.data[i].late+" minute/s");
@@ -222,7 +223,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -238,7 +239,7 @@
 				var tdName = document.createTextNode(elevenStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(elevenStored.data[i].late+" minute/s");
@@ -266,7 +267,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -282,7 +283,7 @@
 				var tdName = document.createTextNode(twelveStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(twelveStored.data[i].late+" minute/s");
@@ -310,7 +311,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -326,7 +327,7 @@
 				var tdName = document.createTextNode(oneStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(oneStored.data[i].late+" minute/s");
@@ -354,7 +355,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -370,7 +371,7 @@
 				var tdName = document.createTextNode(twoStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(twoStored.data[i].late+" minute/s");
@@ -398,7 +399,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -414,7 +415,7 @@
 				var tdName = document.createTextNode(threeStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(threeStored.data[i].late+" minute/s");
@@ -442,7 +443,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -458,7 +459,7 @@
 				var tdName = document.createTextNode(fourStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(fourStored.data[i].late+" minute/s");
@@ -486,7 +487,7 @@
 				var tdAbsent = document.createTextNode("ABSENT");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
-				var tdLate = document.createTextNode("--------");
+				var tdLate = document.createTextNode("-");
 				td4.appendChild(tdLate);
 				tr.appendChild(td1);
 				tr.appendChild(td2);
@@ -502,7 +503,7 @@
 				var tdName = document.createTextNode(fiveStored.data[i].name);
 				td2.appendChild(tdName);
 				var td3 = document.createElement("td");
-				var tdAbsent = document.createTextNode("--------");
+				var tdAbsent = document.createTextNode("-");
 				td3.appendChild(tdAbsent);
 				var td4 = document.createElement("td");
 				var tdLate = document.createTextNode(fiveStored.data[i].late+" minute/s");
